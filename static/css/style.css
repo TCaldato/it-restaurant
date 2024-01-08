@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalam&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+body {
+    font-family: 'Kalam', cursive;
+}
+
+/* Containers */
+
+.container-wrapper--red {
+    background-color: #f05f40;
+    color: white;
+}
+
+.container-fluid{
+    padding: 0;
+}
+.callout-container {
+    height: 100vh;
+
+    background: url('../images/table_restaurant.jpg') no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.content-container {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+/* Navbar */
+
+.navalert-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1;
+}
+
+.navbar {
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    margin-left: 16px;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    margin-left: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+
+/* Jumbotron */
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron-header {
+    color: #f3f3f3;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.jumbotron .lead {
+    color: #fff;
+}
+
+/* Block dividers */
+
+.block-divider {
+    width:875px;
+    height: 5px;
+    border: 0;
+    background-color: #fff;
+}
+
+/*-----------------Page Headers */
+
+.page-header {
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    margin-top: 0;
+}
+
+/* -----------------Our Story */
+
+.story-title {
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    margin: 0;
+    font-size: 40px;
+}
+
+.story-title-line {   
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 283px;
+    height: 20px;
+    top: 100%;
+    left: 1rem;
+}
+
+.story-text p {
+    font-family: 'Kalam', cursive;
+    font-size: 16px;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+/* -----------------Our Food */
+
+.our-food-img {
+    max-width: 90%;
+    height: auto;    
+}
+
+.food-pad-marg {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+}
+
+.food-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dinner-menu {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dinner-menu:hover {
+    background-color: gray;
+    color: #fff;
+}
+
+/*----------------------Footer*/
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+.centralize-content{
+    text-align: center
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #e84610;
+}
+
+/*----------------------Media Query*/
+
+@media (max-width: 767.98px) { 
+    .justify-content-start, .justify-content-end {
+        justify-content: center !important;
+    }    
+
+}
