@@ -3,50 +3,91 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
+<!-- Callout -->
+<div class="container-fluid callout-container">
+    <div class="opaque-overlay">&nbsp;</div>
     <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="#" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                            </a>
-
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <h1 class="jumbotron-header">Experience the finest tast of the Italian Cuisine.</h1>
+                <hr class="block-divider">
+                <p class="lead">Always Developing the best Experience for the Customer.
+                    <span class="d-inline d-sm-none"><br></span>
+            </section>
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
+<!-- Callout -->
+<!-- Our Story -->
+<section class="container-wrapper">
+    <div class="container content-container">
+        <section>
+            <div class="row">
+                <div class="col-12 page-header">
+                    <h2 class="story-title">Our Story</h2>
+                    <img class="story-tile-line" src="./assets/images/line.jpg" alt="Line">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center story-text">                    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu</p>
+                        <p>One of two columns with the irrepressible Italian spirit: a meeting 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu.
+                            One of two columns with the irrepressible Italian spirit: a meeting 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
+                        </p>   
+                        <p>Lorem ipsum dolor sit amet, consecsed do eiu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<!-- Our Story -->
+<!-- Our Food-->
+<section class="container">
+    <div class="row">
+        <div class="col-12 page-header">
+            <h2 class="story-title">Our Food</h2>
+            <img class="story-tile-line" src="./assets/images/line.jpg" alt="Line">
+        </div>
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-4 food-pad-marg">
+            <img class="our-food-img " src="./assets/images/pasta.jpg" alt="pasta">
+        </div>
+        <div class="col-6 col-12 col-md-6 food-text">
+            <p>One of two columns with the irrepressible Italian spirit: a meeting 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu.
+                One of two columns with the irrepressible Italian spirit: a meeting 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
+                <br>
+                <a class="dinner-menu" href="assets/images/dinner-menu.pdf" target="_blank">
+                    Dinner Menu
+                </a>
+            </p>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-4 food-pad-marg">
+            <img class="our-food-img" src="./assets/images/lasagna.jpg" alt="lasagna">
+        </div>
+        <div class="col-6 col-12 col-md-6 food-text">
+            <p>One of two columns with the irrepressible Italian spirit: a meeting 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu.
+                One of two columns with the irrepressible Italian spirit: a meeting 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
+                <br>
+                <a class="dinner-menu" href="assets/images/dinner-menu.pdf" target="_blank">
+                    Dinner Menu
+                </a>
+            </p>
+      </div>
+    </div>
+</section>
+<!-- Our Food-->  
 
 <!-- index.html content ends here -->
 {% endblock %}
