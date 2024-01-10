@@ -14,10 +14,10 @@ body {
 .container-fluid{
     padding: 0;
 }
-.callout-container {
+img > .callout-container {
     height: 100vh;
 
-    background: url('../images/table_restaurant.jpg') no-repeat bottom right fixed;
+    background: no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,6 +28,7 @@ body {
     justify-content: center;
 
     position: relative;
+    z-index: 0;
 }
 
 .opaque-overlay {
@@ -94,10 +95,12 @@ body {
     color: #f3f3f3;
     font-weight: bold;
     font-size: 45px;
+    opacity: .75;
 }
 
-.jumbotron .lead {
+.lead {
     color: #fff;
+    opacity: .75;
 }
 
 /* Block dividers */
