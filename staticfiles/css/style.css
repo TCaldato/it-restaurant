@@ -14,10 +14,10 @@ body {
 .container-fluid{
     padding: 0;
 }
-img > .callout-container {
+.callout-container {
     height: 100vh;
 
-    background: no-repeat bottom right fixed;
+    background: url('../images/table_restaurant.jpg') no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,7 +28,7 @@ img > .callout-container {
     justify-content: center;
 
     position: relative;
-    z-index: 0;
+    
 }
 
 .opaque-overlay {
@@ -98,7 +98,7 @@ img > .callout-container {
     opacity: .75;
 }
 
-.lead {
+.jumbotron .lead {
     color: #fff;
     opacity: .75;
 }
