@@ -17,7 +17,7 @@ body {
 .callout-container {
     height: 100vh;
 
-    background: url('../images/table_restaurant.jpg') no-repeat bottom right fixed;
+    background: no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,7 +28,7 @@ body {
     justify-content: center;
 
     position: relative;
-    
+
 }
 
 .opaque-overlay {

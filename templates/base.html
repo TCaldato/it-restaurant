@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
+<!-- Head -->
 <head>
     <meta charset="UTF-8">
     <title>It Restaurant</title>
@@ -15,8 +16,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 </head>
+<!-- Head -->
 
 <body>
 
@@ -31,13 +32,15 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto mr-2">
                     <li class="active nav-item mr-2"><a class="nav-link" href="./index.html">Home</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="assets/images/dinner-menu.pdf" target="_blank">Menu</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a></li>
                     <li class="nav-item mr-2"><a class="nav-link" href="#">Reservation</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <!-- Navigation -->
 
+    <!-- Main Content -->
     <main>
 
         {% block content %}
@@ -45,6 +48,7 @@
         {% endblock content %}
 
     </main>
+    <!-- Main Content -->
 
     <!-- Footer -->
     <footer class="container-wrapper">
@@ -59,8 +63,7 @@
             <div class="col-sm-3 centralize-content">
                 <h3>Discover</h3> 
                 <p> 
-                    <a class="nav-link" href="#" target="_blank">Menu</a>
-                    <a class="nav-link" href="#">Galery</a>
+                    <a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a>
                     <a class="nav-link" href="#">Reservation</a>
                 </p>       
             </div>
