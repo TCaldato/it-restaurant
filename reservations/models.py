@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Booking(models.Model):
     """
-    Booking model
+    Represents a booking for a user at a specific date and time.
     """
 
     class AppointmentTime(datetime.time, models.Choices):
