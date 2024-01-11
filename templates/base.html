@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'index' as index_url %}
+{% url 'reservations' as reservations_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -31,9 +32,9 @@
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto mr-2">
-                    <li class="active nav-item mr-2"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="active nav-item mr-2"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item mr-2"><a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a></li>
-                    <li class="nav-item mr-2"><a class="nav-link" href="#">Reservation</a></li>
+                    <li class="nav-item mr-2"><a class="nav-link" href="{% url 'reservations' %}" >Reservations</a></li>
                 </ul>
             </div>
         </nav>
@@ -64,7 +65,7 @@
                 <h3>Discover</h3> 
                 <p> 
                     <a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a>
-                    <a class="nav-link" href="#">Reservation</a>
+                    <a class="nav-link" href="{% url 'reservations' %}" >Reservations</a>
                 </p>       
             </div>
             <div class="col-sm-3 centralize-content">

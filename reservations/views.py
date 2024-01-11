@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import Booking
-from .forms import BookingForm
+from .forms import ReservationForm
 from datetime import datetime
 
 # The number of appointments that can be taken
@@ -20,7 +20,7 @@ def view_reservation(request):
     context = {
         'bookings': bookings
     }
-    return render(request, 'reservations/view_reservation.html', context)
+    return render(request, 'reservations/views_reservation.html', context)
 
 
 @login_required()
@@ -94,7 +94,7 @@ def edit_booking(request, booking_id):
 
 
 @login_required()
-def cancel_reservation(request, booking_id):
+def cancel_booking(request, booking_id):
     """
     Cancel reservation:
     Handles the cancellation of an existing booking for the logged-in user.
