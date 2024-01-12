@@ -6,11 +6,102 @@
 
 {% block content %}
 
-<div class="container-fluid callout-container reservation-container ">
+<div class="container-fluid callout-container">
     <div class="row">
         <div class="col-12">
             <section class="jumbotron text-center">
                 {% if user.is_authenticated %}
+                <section class="d-flex flex-column align-items-center text-center min-vh-100">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Bookings</h1>
+                            <p>Welcome <strong id="current-user">{{ user }}</strong>
+                            </p>
+                            <p>Booking days: <input type="text" id="datepicker">
+                                <span id="help" data-bs-toggle="modal" data-bs-target="#help-modal">
+                                <i class="fas fa-question-circle"></i>
+                                </span>
+                            </p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-4 mt-2">
+                                        <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
+                                    </div>
+                                    <div class="col-12 col-md-4 mt-2">
+                                        <button id="table-filter-user" class="btn" role="button">My Bookings</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Booking table -->
+                            <table id="view-booking-table" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>User</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                {% for booking in bookings %} 
+                                <tbody>
+                                    <tr class="booking-row">
+                                        <!--if superuser or staff user show all booking fields --> {% if request.user.is_superuser or request.user.is_staff %} 
+                                        <td>{{ booking.user }}</td>
+                                        <td>{{ booking.date }}</td>
+                                        <td>{{ booking.start_time }}</td>
+                                        {% else %}
+                                        <!-- if standard user is authenticated show their username but anonymize other usernames names --> {% if booking.user == request.user %} 
+                                        <td>{{ booking.user }}</td>
+                                        <td>{{ booking.date }}</td>
+                                        <td>{{ booking.start_time }}</td>
+                                        {% else %} 
+                                        <td>*****</td>
+                                        <td></td>
+                                        <td>{{ booking.date }}</td>
+                                        <td>{{ booking.start_time }}</td>
+                                        <td class="booked">Booked</td>
+                                        {% endif %} {% endif %}
+                                        <!--apply an edit & cancel link to each row if superuser staff user the user.
+                                            or if current standard user created the record--> {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %} 
+                                        <td>
+                                            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+                                        </td>
+                                        <td class="pointer">
+                                            <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}"> Cancel </a>
+                                        </td>
+                                        <!-- modal cancellation confirmation -->
+                                        <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}"> Cancel Booking for {{ user }}? </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body"> Are you sure you want to cancel the booking for <span>{{ user }}</span> on {{ booking.date }} at {{ booking.start_time }}? </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn" data-bs-dismiss="modal">No</button>
+                                                        <button type="button" class="btn">
+                                                        <a href="{% url 'cancel_booking' booking.id %}">Yes</a>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </td> {% else %} 
+                                        <td></td>
+                                        <td></td>
+                                        {% endif %}
+                                    </tr>
+                                    {% empty %} 
+                                    <tr>
+                                        <td>There are no booked appointments</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <div class="footer-buffer"></div>
+                        </div>
+                    </div>
+                </section>
                 <h2><a class="jumbotron-header {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a></h2>
                 {% else %}
                 <h2><a class="jumbotron-header {% if request.path == signup_url %}active{% endif %}" aria-current="page"
