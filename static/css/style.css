@@ -30,9 +30,20 @@ body {
     position: relative;
 }
 
-/* Reservations Page Containers */
-.reservation-container {
-    height: 70vh !important;
+/* Reservations Page */
+.btn-primary {
+    --bs-btn-color: black !important;
+}
+
+.btn {
+    background-color: #f05f40 !important;
+}
+
+.login-logout-button {
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+    opacity: .75;
 }
 
 .opaque-overlay {
@@ -198,7 +209,7 @@ body {
 footer {
     background-color: #525252;
     color: #fafafa;
-    min-height: 120px;
+    min-height: 90px;
     margin: 0;
 }
 

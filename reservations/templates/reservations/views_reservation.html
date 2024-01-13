@@ -32,6 +32,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <!-- Booking table -->
                             <table id="view-booking-table" class="table">
                                 <thead>
@@ -44,12 +45,12 @@
                                 {% for booking in bookings %} 
                                 <tbody>
                                     <tr class="booking-row">
-                                        <!--if superuser or staff user show all booking fields --> {% if request.user.is_superuser or request.user.is_staff %} 
+                                         {% if request.user.is_superuser or request.user.is_staff %} 
                                         <td>{{ booking.user }}</td>
                                         <td>{{ booking.date }}</td>
                                         <td>{{ booking.start_time }}</td>
                                         {% else %}
-                                        <!-- if standard user is authenticated show their username but anonymize other usernames names --> {% if booking.user == request.user %} 
+                                         {% if booking.user == request.user %} 
                                         <td>{{ booking.user }}</td>
                                         <td>{{ booking.date }}</td>
                                         <td>{{ booking.start_time }}</td>
@@ -60,15 +61,14 @@
                                         <td>{{ booking.start_time }}</td>
                                         <td class="booked">Booked</td>
                                         {% endif %} {% endif %}
-                                        <!--apply an edit & cancel link to each row if superuser staff user the user.
-                                            or if current standard user created the record--> {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %} 
+                                        {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %} 
                                         <td>
                                             <a href="{% url 'edit_booking' booking.id %}">Edit</a>
                                         </td>
                                         <td class="pointer">
                                             <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}"> Cancel </a>
                                         </td>
-                                        <!-- modal cancellation confirmation -->
+                                        
                                         <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -102,16 +102,23 @@
                         </div>
                     </div>
                 </section>
-                <h2><a class="jumbotron-header {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a></h2>
+                <h2><a class="login-logout-button {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a></h2>
                 {% else %}
-                <h2><a class="jumbotron-header {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                    href="{% url 'account_signup' %}">Register</a></h2>
-                <h2><a class="jumbotron-header {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a></h2>
+                <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+                    <h3>Welcome</h3>
+                    <p>Please Login or Register yourself for Booking a Table</p>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-dark {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}" role="button">Register</a>
+                        <a class="btn btn-dark {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" role="button">Login</a>
+                    </div>
+                </div>
                 {% endif %}
             </section>
         </div>
     </div>
 </div>
+
+
 
 
 
