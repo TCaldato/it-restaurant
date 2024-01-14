@@ -31,12 +31,14 @@ body {
 }
 
 /* Reservations Page */
-.btn-primary {
-    --bs-btn-color: black !important;
-}
 
 .btn {
-    background-color: #f05f40 !important;
+    color: black;
+    background-color: #f05f40;
+}
+
+.btn:hover {
+    background-color: #7c280c;
 }
 
 .login-logout-button {
