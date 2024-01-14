@@ -41,11 +41,33 @@ body {
     background-color: #7c280c;
 }
 
-.login-logout-button {
+.btn-cancel{
+    color: #0d6efd;
+}
+
+.no-line{
+    text-decoration: none;
     color: black;
-    font-weight: bold;
-    font-size: 45px;
-    opacity: .75;
+}
+
+/* cancel booking modal */
+.modal-content {
+	color: black;
+	border: 3px solid black;
+	border-radius: 10px;
+}
+
+.modal-header {
+	background: rgba(var(--theme-four), 1);
+}
+
+.modal-body span {
+	color: rgba(var(--theme-five), 1);
+	font-weight: 500;
+}
+
+.modal-footer {
+	justify-content: center
 }
 
 .opaque-overlay {

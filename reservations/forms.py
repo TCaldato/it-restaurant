@@ -12,7 +12,7 @@ class DateInput(forms.DateInput):
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['user', 'date', 'start_time', 'email']
+        fields = ['date', 'start_time', 'email']
         widgets = {
             'date': DateInput()
         }
