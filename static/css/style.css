@@ -79,11 +79,6 @@ body {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.content-container {
-    padding-top: 45px;
-    padding-bottom: 45px;
-}
-
 /* Navbar */
 
 .navalert-container {
@@ -123,6 +118,10 @@ body {
     color: #fff;
 }
 
+.nav-link:hover {
+    color: #e84610;
+}
+
 
 /* Jumbotron */
 
@@ -134,12 +133,12 @@ body {
     color: #f3f3f3;
     font-weight: bold;
     font-size: 45px;
-    opacity: .75;
+    opacity: .9;
 }
 
 .jumbotron .lead {
-    color: #fff;
-    opacity: .75;
+    color: #f3f3f3;
+    opacity: .9;
 }
 
 /* Block dividers */
@@ -195,7 +194,8 @@ body {
 
 .our-food-img {
     max-width: 90%;
-    height: auto;    
+    height: auto;
+    border-radius: 8%; 
 }
 
 .food-pad-marg {
@@ -224,7 +224,7 @@ body {
 }
 
 .dinner-menu:hover {
-    background-color: gray;
+    background-color: #7c280c;
     color: #fff;
 }
 
@@ -235,6 +235,12 @@ footer {
     color: #fafafa;
     min-height: 90px;
     margin: 0;
+}
+
+.content-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8%;
 }
 
 .centralize-content{

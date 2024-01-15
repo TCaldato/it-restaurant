@@ -8,7 +8,8 @@
 <!-- Head -->
 <head>
     <meta charset="UTF-8">
-    <title>It Restaurant</title>
+    <a class="nav-link {% if request.path == index_url %}active{%endif%}" 
+        aria-current="page" href="{% url 'index' %}" ><title>It Restaurant</title></a>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
@@ -90,13 +91,13 @@
                 <h3>Social</h3>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
-                        <a target="_blank" href="#">
+                        <a target="_blank" href="https://www.facebook.com/">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a target="_blank" href="#">
+                        <a target="_blank" href="https://www.instagram.com/">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
                         </a>
