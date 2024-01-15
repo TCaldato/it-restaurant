@@ -6,6 +6,7 @@
     <div id="booking-form-container" class="row">
         <div class="col">
             <h1>Edit Booking</h1>
+            <hr>
             <form id="booking-form" method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}

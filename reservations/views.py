@@ -30,6 +30,7 @@ def create_booking(request):
         if form.is_valid():
             chosen_date = form.cleaned_data['date']
             chosen_time = form.cleaned_data['start_time']
+            num_people = form.cleaned_data['num_people']
             user_name = request.user.username
             num_same_bookings = Booking.objects.filter(
                 date=chosen_date, start_time=chosen_time, user=request.user).count()
@@ -39,7 +40,8 @@ def create_booking(request):
                     request, f'No appointment available on {chosen_date} at {chosen_time}.')
                 return redirect('create_booking')
             else:
-                form.instance.user = request.user  # Set the user before saving
+                form.instance.user = request.user
+                form.instance.num_people = num_people  # Set the number of people
                 form.save()
                 messages.success(
                     request, f'Your appointment for {user_name} has been confirmed.')
@@ -66,6 +68,7 @@ def edit_booking(request, booking_id):
         if form.is_valid():
             chosen_date = form.cleaned_data['date']
             chosen_time = form.cleaned_data['start_time']
+            num_people = form.cleaned_data['num_people']
             num_same_bookings = Booking.objects.filter(
                 date=chosen_date, start_time=chosen_time, user=request.user).exclude(id=booking_id).count()
 

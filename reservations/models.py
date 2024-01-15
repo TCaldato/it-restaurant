@@ -1,6 +1,8 @@
 import datetime
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator
+
 
 class Booking(models.Model):
     """
@@ -24,6 +26,10 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField(max_length=30, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
+    num_people = models.PositiveIntegerField(
+        default=1,
+        validators=[MaxValueValidator(limit_value=10)],
+    )
     start_time = models.TimeField(
         choices=AppointmentTime.choices, null=False,
         blank=False, default=AppointmentTime.PM_1800)
