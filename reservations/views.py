@@ -97,4 +97,6 @@ def cancel_booking(request, booking_id):
     """
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
+    messages.warning(request, 'Your booking has been deleted')
     return redirect('reservations')
+

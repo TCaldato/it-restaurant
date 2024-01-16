@@ -22,12 +22,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    position: relative;
+    
 }
 
 /* Reservations Page */
@@ -52,11 +51,12 @@ body {
 
 .alert-dismissible {
     display: flex;
-    padding-right: 3rem;
-    margin: 0px 350px;
+    width: 100%;
     position: relative;
     top: 80px;
     justify-content: center;
+    z-index: 4;
+    opacity: 0.4;
 }
 
 
