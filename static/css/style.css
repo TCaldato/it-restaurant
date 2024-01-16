@@ -51,10 +51,12 @@ body {
 }
 
 .alert-dismissible {
+    display: flex;
     padding-right: 3rem;
-    z-index: 3;
-    padding-top: 50px;
-    position: absolute;
+    margin: 0px 350px;
+    position: relative;
+    top: 80px;
+    justify-content: center;
 }
 
 
