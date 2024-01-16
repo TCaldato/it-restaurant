@@ -18,6 +18,7 @@ class ReservationForm(forms.ModelForm):
             'num_people': forms.NumberInput(attrs={'max': 10, 'min': 1}),  # Set max and min attributes
         }
 
+    # Code got from: https://docs.djangoproject.com/en/5.0/ref/forms/widgets/
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['date'].widget.attrs.update({

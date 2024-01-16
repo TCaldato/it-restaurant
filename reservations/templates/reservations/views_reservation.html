@@ -18,6 +18,7 @@
                             <h1>Bookings</h1>
                             <hr>
                             <h3>Welcome <strong id="current-user">{{ user }}</strong></h3>
+                            <hr>
                             <p>For Booking a Day:</p>
                             <div>
                                 <div class="d-grid gap-2 col-6 mx-auto">
@@ -32,6 +33,7 @@
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>N. People</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 {% for booking in bookings %} 
@@ -87,6 +89,7 @@
                 {% else %}
                 <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
                     <h2>Welcome</h2>
+                    <hr>
                     <p>Please Login or Register for Booking a Table</p>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <a class="btn btn-dark {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}" role="button">Register</a>

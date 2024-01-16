@@ -8,7 +8,7 @@ class Booking(models.Model):
     """
     Represents a booking for a user at a specific date and time.
     """
-
+    #Code from: https://docs.djangoproject.com/en/5.0/ref/models/fields/
     class AppointmentTime(datetime.time, models.Choices):
         """
         Subclass appointment times for start_time field
