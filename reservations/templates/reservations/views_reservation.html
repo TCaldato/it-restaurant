@@ -6,113 +6,119 @@
 {% url 'account_logout' as logout_url %}
 
 {% block content %}
-<div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
-    <div class="row">
-        <div class="col-12">
-            <section class="text-center">
-                {% if user.is_authenticated %} <!-- Check if the user is authenticated -->
-                <section class="container d-flex flex-column justify-content-center align-items-center text-center">
-                    <div class="row">
-                        <div class="col">
-                            <h1>Bookings</h1>
-                            <hr>
-                            <h3>Welcome <strong id="current-user">{{ user }}</strong></h3>
-                            <hr>
-                            <p>For Booking a Day:</p>
-                            <div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
-                                    <a class="btn btn-dark" href="{% url 'create_booking' %}" role="button">Booking</a>
+<!-- Callout -->
+<div class="container-fluid callout-container">
+    <div class="opaque-overlay">&nbsp;
+        <img class="callout-container opaque-overlay img-fluid" src="{% static 'img/table_restaurant.jpg' %}">
+    </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+        <div class="row">
+            <div class="col-12">
+                <section class="text-center">
+                    {% if user.is_authenticated %} <!-- Check if the user is authenticated -->
+                    <section class="container d-flex flex-column justify-content-center align-items-center text-center">
+                        <div class="row">
+                            <div class="col">
+                                <h1>Bookings</h1>
+                                <hr>
+                                <h3>Welcome <strong id="current-user">{{ user }}</strong></h3>
+                                <hr>
+                                <p>For Booking a Day:</p>
+                                <div>
+                                    <div class="d-grid gap-2 col-6 mx-auto">
+                                        <a class="btn btn-dark" href="{% url 'create_booking' %}" role="button">Booking</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <hr>
-                            <!-- Booking table -->
-                            <table id="view-booking-table" class="table">
-                                <thead>
-                                    <tr>
-                                        <th>User</th>
-                                        <th>Date</th>
-                                        <th>Time</th>
-                                        <th>N. People</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                {% for booking in bookings %} <!-- Loop through bookings -->
-                                <tbody>
-                                    <tr class="booking-row">
-                                        {% if request.user.is_superuser or request.user.is_staff %} <!-- Check if the user is superuser or staff -->
-                                        <td>{{ booking.user }}</td>
-                                        <td>{{ booking.date }}</td>
-                                        <td>{{ booking.start_time }}</td>
-                                        <td>{{ booking.num_people }}</td>
-                                        {% else %}
-                                        {% if booking.user == request.user %} <!-- Check if the booking belongs to the logged-in user -->
-                                        <td>{{ booking.user }}</td>
-                                        <td>{{ booking.date }}</td>
-                                        <td>{{ booking.start_time }}</td>
-                                        <td>{{ booking.num_people }}</td>
-                                        {% else %} 
-                                        <td>*****</td>
-                                        <td>{{ booking.date }}</td>
-                                        <td>{{ booking.start_time }}</td>
-                                        <td>{{ booking.num_people }}</td>
-                                        <td class="booked">Booked</td>
-                                        {% endif %} {% endif %}
-                                        {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %} <!-- Check if the user can perform actions -->
-                                        <td>
-                                            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
-                                        </td>
-                                        <td class="cancel-button">
-                                            <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}" type="button" class="cancel-button" > Cancel </a>
-                                        </td>
-                                        <!-- Cancel Booking Modal -->
-                                        <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}"> Cancel Booking for {{ booking.user }}? </h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body"> Are you sure you want to cancel the booking for <span>{{ booking.user }}</span> on {{ booking.date }} at {{ booking.start_time }}? </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn white no-cancel-button" data-bs-dismiss="modal">No</button>
-                                                        <button type="button" class="btn white">
-                                                            <a class="no-underline" href="{% url 'cancel_booking' booking.id %}">Yes</a>
-                                                        </button>
+                                <hr>
+                                <!-- Booking table -->
+                                <table id="view-booking-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>N. People</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    {% for booking in bookings %} <!-- Loop through bookings -->
+                                    <tbody>
+                                        <tr class="booking-row">
+                                            {% if request.user.is_superuser or request.user.is_staff %} <!-- Check if the user is superuser or staff -->
+                                            <td>{{ booking.user }}</td>
+                                            <td>{{ booking.date }}</td>
+                                            <td>{{ booking.start_time }}</td>
+                                            <td>{{ booking.num_people }}</td>
+                                            {% else %}
+                                            {% if booking.user == request.user %} <!-- Check if the booking belongs to the logged-in user -->
+                                            <td>{{ booking.user }}</td>
+                                            <td>{{ booking.date }}</td>
+                                            <td>{{ booking.start_time }}</td>
+                                            <td>{{ booking.num_people }}</td>
+                                            {% else %} 
+                                            <td>*****</td>
+                                            <td>{{ booking.date }}</td>
+                                            <td>{{ booking.start_time }}</td>
+                                            <td>{{ booking.num_people }}</td>
+                                            <td class="booked">Booked</td>
+                                            {% endif %} {% endif %}
+                                            {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %} <!-- Check if the user can perform actions -->
+                                            <td>
+                                                <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+                                            </td>
+                                            <td class="cancel-button">
+                                                <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}" type="button" class="cancel-button" > Cancel </a>
+                                            </td>
+                                            <!-- Cancel Booking Modal -->
+                                            <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}"> Cancel Booking for {{ booking.user }}? </h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body"> Are you sure you want to cancel the booking for <span>{{ booking.user }}</span> on {{ booking.date }} at {{ booking.start_time }}? </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn white no-cancel-button" data-bs-dismiss="modal">No</button>
+                                                            <button type="button" class="btn white">
+                                                                <a class="no-underline" href="{% url 'cancel_booking' booking.id %}">Yes</a>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        </td>
-                                        {% else %} 
-                                        <td></td>
-                                        <td></td>
-                                        {% endif %}
+                                            </td>
+                                            {% else %} 
+                                            <td></td>
+                                            <td></td>
+                                            {% endif %}
+                                        </tr>
+                                    </tbody>
+                                    {% empty %} 
+                                    <tr>
+                                        <td colspan="5">There are no booked appointments</td> <!-- If there are no bookings -->
                                     </tr>
-                                </tbody>
-                                {% empty %} 
-                                <tr>
-                                    <td colspan="5">There are no booked appointments</td> <!-- If there are no bookings -->
-                                </tr>
-                                {% endfor %}
-                            </table>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a class="btn btn-dark {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" role="button">Logout</a>
+                    </div>
+                    {% else %}
+                    <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+                        <h2>Welcome</h2>
+                        <hr>
+                        <p>Please Login or Register for Booking a Table</p>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a class="btn btn-dark {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}" role="button">Register</a>
+                            <a class="btn btn-dark {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" role="button">Login</a>
                         </div>
                     </div>
+                    {% endif %}
                 </section>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <a class="btn btn-dark {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" role="button">Logout</a>
-                </div>
-                {% else %}
-                <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
-                    <h2>Welcome</h2>
-                    <hr>
-                    <p>Please Login or Register for Booking a Table</p>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <a class="btn btn-dark {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}" role="button">Register</a>
-                        <a class="btn btn-dark {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}" role="button">Login</a>
-                    </div>
-                </div>
-                {% endif %}
-            </section>
+            </div>
         </div>
     </div>
 </div>

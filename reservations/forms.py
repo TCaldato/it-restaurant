@@ -12,7 +12,7 @@ class DateInput(forms.DateInput):
 class ReservationForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['date', 'start_time', 'num_people', 'email']
+        fields = ['date', 'start_time', 'num_people']
         widgets = {
             'date': DateInput(),
             'num_people': forms.NumberInput(attrs={'max': 10, 'min': 1}),  # Set max and min attributes

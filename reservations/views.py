@@ -73,7 +73,7 @@ def edit_booking(request, booking_id):
                 date=chosen_date, start_time=chosen_time, user=request.user).exclude(id=booking_id).count()
 
             if num_same_bookings >= num_appointments:
-                messages.warning(
+                messages.error(
                     request, 'No appointment available or this is your reservation')
                 return redirect('edit_booking', booking_id)
             else:

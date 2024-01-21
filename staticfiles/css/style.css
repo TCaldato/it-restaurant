@@ -74,6 +74,14 @@ body {
 
 }
 
+.table {
+    --bs-table-bg: none;
+}
+
+.col-12 {
+    z-index: 5;
+}
+
 
 /* cancel booking modal */
 .modal-content {

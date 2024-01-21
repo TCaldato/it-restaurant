@@ -8,8 +8,8 @@
 <!-- Head -->
 <head>
     <meta charset="UTF-8">
-    <a class="nav-link {% if request.path == index_url %}active{%endif%}" 
-        aria-current="page" href="{% url 'index' %}" ><title>It Restaurant</title></a>
+    <link rel="icon" href="{% static 'img/icon.png' %}"/>
+    <title>IT Restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
@@ -29,7 +29,8 @@
     <!-- Navigation -->
     <header class="container-fluid navalert-container">
         <nav class="navbar navbar-dark navbar-expand-sm">
-            <a href="#" class="navbar-brand">IT Restaurant</a>
+            <a class="navbar-brand {% if request.path == index_url %}active{%endif%}" 
+                aria-current="page" href="{% url 'index' %}">IT Restaurant</a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -67,18 +68,19 @@
             <div class="col-sm-3 centralize-content">
                 <h3>IT Restaurant</h3>
                 <p>
-                    Join us at It Restaurant.
+                    Join us at IT Restaurant.
                 </p>
             </div>
             <div class="col-sm-3 centralize-content">
                 <h3>Discover</h3> 
                 <p> 
-                    <a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a>
+                    <a class="nav-link" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">Menu</a><!-- Menu PDF -->
                     <a class="nav-link {% if request.path == reservations_url %}active{%endif%}" 
-                    aria-current="page" href="{% url 'reservations' %}" >Reservations</a>
+                    aria-current="page" href="{% url 'reservations' %}" >Reservations</a><!-- Link for Reservations page -->
                 </p>       
             </div>
             <div class="col-sm-3 centralize-content">
+                <!-- Restaurant Info -->
                 <h3>Contact</h3>
                 <div><i class="fa-solid fa-phone"></i> 83 1233535</div>
                 <div><i class="fa-solid fa-location-pin"></i> 
@@ -91,6 +93,7 @@
                 </div>
             </div>
             <div class="col-sm-3 centralize-content">
+                <!-- Restaurant Social Media -->
                 <h3>Social</h3>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">

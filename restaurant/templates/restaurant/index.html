@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text-center story-text">
-                        <p>Welcome to It Restaurant</p>
+                        <p>Welcome to IT Restaurant</p>
                         <p> A hidden gem nestled in the heart of Dublin. 
                             For the past five years, we have been delighting locals and visitors 
                             alike with an authentic Italian culinary
@@ -68,13 +68,15 @@
             <img class="our-food-img " src="{% static 'img/pasta.jpg' %}" alt="pasta">
         </div>
         <div class="col-6 col-12 col-md-6 food-text">
-            <p>It Restaurant takes pride in its rich heritage of serving traditional 
+            <p>IT Restaurant takes pride in its rich heritage of serving traditional 
                 Italian dishes made with love and passion. Our chefs, inspired by the culinary 
                 traditions of various regions in Italy, skillfully craft each dish to perfection.
                 <br>
                 <a class="dinner-menu" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">
                     Dinner Menu
                 </a>
+                <a class="dinner-menu {% if request.path == reservations_url %}active{%endif%}" 
+                    aria-current="page" href="{% url 'reservations' %}" >Reservations</a>
             </p>
       </div>
     </div>
@@ -92,6 +94,8 @@
                 <a class="dinner-menu" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">
                     Dinner Menu
                 </a>
+                <a class="dinner-menu {% if request.path == reservations_url %}active{%endif%}" 
+                    aria-current="page" href="{% url 'reservations' %}" >Reservations</a>
             </p>
       </div>
     </div>
@@ -103,12 +107,14 @@
             <p>Whether you're savoring the creamy risotto, 
                 indulging in the mouthwatering tiramisu, or enjoying a 
                 robust espresso, each dish is a testament to our commitment to excellence.
-                Join us at It Restaurant, where the spirit of Italy meets the charm 
+                Join us at IT Restaurant, where the spirit of Italy meets the charm 
                 of Dublin. Buon appetito!
                 <br>
                 <a class="dinner-menu" href="{% static 'img/dinner-menu.pdf' %}" target="_blank">
                     Dinner Menu
                 </a>
+                <a class="dinner-menu {% if request.path == reservations_url %}active{%endif%}" 
+                    aria-current="page" href="{% url 'reservations' %}" >Reservations</a>
             </p>
       </div>
     </div>
@@ -125,7 +131,7 @@
                 <div class="row ">
                     <div class="col-12">
                         <div class="text-center story-text">                    
-                            <p>Discover the taste of Italy at It Restaurant, Dublin's finest Italian restaurant. </p>
+                            <p>Discover the taste of Italy at IT Restaurant, Dublin's finest Italian restaurant. </p>
                         </div>
                     </div>
                     <div class="container text-center">
