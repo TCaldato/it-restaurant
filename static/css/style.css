@@ -1,171 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalam&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
 body {
-    font-family: 'Kalam', cursive;
+	font-family: 'Kalam', cursive;
 }
 
 /* Containers */
 
 .container-wrapper--red {
-    background-color: #f05f40;
-    color: white;
+	background-color: #f05f40;
+	color: white;
 }
 
-.container-fluid{
-    padding: 0;
+.container-fluid {
+	padding: 0;
 }
+
 .callout-container {
-    height: 100vh;
+	height: 100vh;
 
-    background: no-repeat bottom right fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	background: no-repeat bottom right fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+
 }
 
 /* Navbar */
 
 .navalert-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 0;
+	padding-right: 0;
+	z-index: 1;
 }
 
 .navbar {
-    font-family: 'Dancing Script', cursive;
-    margin-bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    border: 0;
-    font-size: 20px;
-    padding-right: 10px;
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.45);
+	border: 0;
+	font-size: 20px;
+	padding-right: 10px;
 }
 
 .navbar .navbar-toggler {
-    border: 0;
+	border: 0;
 }
 
 .navbar .navbar-brand {
-    font-weight: bold;
-    margin-left: 16px;
-    color: white;
-    font-size: 35px;
-    letter-spacing: 2px;
+	font-weight: bold;
+	margin-left: 16px;
+	color: white;
+	font-size: 35px;
+	letter-spacing: 2px;
 }
 
 .nav-link {
-    margin-left: 15px;
-    letter-spacing: 2px;
-    color: #fff;
+	margin-left: 15px;
+	letter-spacing: 2px;
+	color: #fff;
 }
 
 .nav-link:hover {
-    color: #e84610;
+	color: #e84610;
 }
 
 
 /* Jumbotron */
 
 .jumbotron {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 .jumbotron-header {
-    color: #f3f3f3;
-    font-weight: bold;
-    font-size: 45px;
-    opacity: .9;
+	color: #f3f3f3;
+	font-weight: bold;
+	font-size: 45px;
+	opacity: .9;
 }
 
 .jumbotron .lead {
-    color: #f3f3f3;
-    opacity: .9;
+	color: #f3f3f3;
+	opacity: .9;
 }
 
 .lead {
-    font-size: 1.7rem;
-    font-weight: 300;
+	font-size: 1.7rem;
+	font-weight: 300;
 }
 
 /* Block dividers */
 
 .block-divider {
-    
-    height: 5px;
-    border: 0;
-    background-color: #fff;
+
+	height: 5px;
+	border: 0;
+	background-color: #fff;
 }
 
 /* Reservations Page */
 
 .btn {
-    color: black;
-    background-color: #f05f40;
+	color: black;
+	background-color: #f05f40;
 }
 
 .btn:hover {
-    background-color: #7c280c;
+	background-color: #7c280c;
 }
 
 .cancel-button {
-    color: red;
+	color: red;
 }
 
-.white{
-    background-color: white !important;
+.white {
+	background-color: white !important;
 }
 
-.no-underline{
-    color: red;
-    text-decoration: none;
+.no-underline {
+	color: red;
+	text-decoration: none;
 }
 
-.no-cancel-button{
-    color: green;
+.no-cancel-button {
+	color: green;
 }
 
-.no-line{
-    text-decoration: none;
-    color: black;
+.no-line {
+	text-decoration: none;
+	color: black;
 }
 
 .alert-dismissible {
-    display: flex;
-    width: 100%;
-    position: relative;
-    top: 80px;
-    justify-content: center;
-    z-index: 4;
-    font-size: larger;
+	display: flex;
+	width: 100%;
+	position: relative;
+	top: 80px;
+	justify-content: center;
+	z-index: 4;
+	font-size: larger;
 
 }
 
 .table {
-    --bs-table-bg: none;
-    --bs-table-color: white;
-    --bs-table-bg: none;
+	--bs-table-bg: none;
+	--bs-table-color: white;
+	--bs-table-bg: none;
 }
 
 .col-12 {
-    z-index: 5;
+	z-index: 5;
 }
 
 .text-color {
-    color: white;
+	color: white;
 }
 
 .z-index {
-    z-index: 6;
+	z-index: 6;
 }
 
 /* cancel booking modal */
@@ -175,8 +177,8 @@ body {
 	border-radius: 10px;
 }
 
-.modal-backdrop.show{
-    z-index: 4;
+.modal-backdrop.show {
+	z-index: 4;
 }
 
 .modal-header {
@@ -193,145 +195,147 @@ body {
 }
 
 .opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 55%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 55%;
 }
 
 /*-----------------Page Headers */
 
 .page-header {
-    margin-bottom: 0;
-    border-bottom: 0;
-    text-align: center;
+	margin-bottom: 0;
+	border-bottom: 0;
+	text-align: center;
 }
 
 .page-header h2 {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 /* -----------------Our Story */
 
 .story-title {
-    font-family: 'Dancing Script', cursive;
-    position: relative;
-    margin: 0;
-    font-size: 40px;
+	font-family: 'Dancing Script', cursive;
+	position: relative;
+	margin: 0;
+	font-size: 40px;
 }
 
-.story-title-line {   
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 283px;
-    height: 20px;
-    top: 100%;
-    left: 1rem;
+.story-title-line {
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 283px;
+	height: 20px;
+	top: 100%;
+	left: 1rem;
 }
 
 .story-text p {
-    font-family: 'Kalam', cursive;
-    font-size: 16px;
+	font-family: 'Kalam', cursive;
+	font-size: 16px;
 }
 
 .page-header {
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 /* -----------------Our Food */
 
 .our-food-img {
-    max-width: 90%;
-    height: auto;
-    border-radius: 8%; 
+	max-width: 90%;
+	height: auto;
+	border-radius: 8%;
 }
 
 .food-pad-marg {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 3%;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 3%;
 }
 
 .food-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .dinner-menu {
-    background-color: white;
-    color: black;
-    border: 1px solid gray;
-    margin: 20px;
-    border-radius: 5px;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+	background-color: white;
+	color: black;
+	border: 1px solid gray;
+	margin: 20px;
+	border-radius: 5px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
 }
 
 .dinner-menu:hover {
-    background-color: #7c280c;
-    color: #fff;
+	background-color: #7c280c;
+	color: #fff;
 }
 
 /*----------------------Footer*/
 
 footer {
-    background-color: #2d2b2b;
-    color: #fafafa;
-    min-height: 90px;
-    margin: 0;
+	background-color: #2d2b2b;
+	color: #fafafa;
+	min-height: 90px;
+	margin: 0;
 }
 
 .content-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 8%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 8%;
 }
 
-.centralize-content{
-    text-align: center
+.centralize-content {
+	text-align: center
 }
 
 h3 {
-    font-family: 'Dancing Script', cursive;
+	font-family: 'Dancing Script', cursive;
 }
 
 .social-links {
-    padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
 .social-links li a i {
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    border-radius: 50%;
-    font-size: 13px;
-    line-height: 7px;
-    text-align: center;
-    color: #fafafa;
-    background: #8f8f8f;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
+	width: 32px;
+	height: 32px;
+	padding: 12px 0;
+	border-radius: 50%;
+	font-size: 13px;
+	line-height: 7px;
+	text-align: center;
+	color: #fafafa;
+	background: #8f8f8f;
+	-moz-transition: all 0.35s ease-in-out;
+	-webkit-transition: all 0.35s ease-in-out;
+	-o-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
 }
 
 .social-links li a i:hover {
-    background: #e84610;
+	background: #e84610;
 }
 
 /*----------------------Media Query*/
 
-@media (max-width: 767.98px) { 
-    .justify-content-start, .justify-content-end {
-        justify-content: center !important;
-    }    
+@media (max-width: 767.98px) {
+
+	.justify-content-start,
+	.justify-content-end {
+		justify-content: center !important;
+	}
 
 }

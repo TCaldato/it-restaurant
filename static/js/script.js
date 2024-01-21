@@ -10,7 +10,6 @@
         dateFormat: "MM d, yy",
         minDate: 0,
         maxDate: "+12M +0D",
-        beforeShowDay: $.datepicker.noWeekends
     });
 
     datepicker.datepicker("option", "showAnim", "fold");

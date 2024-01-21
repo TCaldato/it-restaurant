@@ -4,13 +4,13 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-
 {% block content %}
-<!-- Callout -->
 <div class="container-fluid callout-container">
+    <!-- Callout -->
     <div class="opaque-overlay">&nbsp;
         <img class="callout-container opaque-overlay img-fluid" src="{% static 'img/table_restaurant.jpg' %}">
     </div>
+    <!-- Callout -->
     <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
         <div class="row">
             <div class="col-12">
@@ -81,7 +81,7 @@
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn white no-cancel-button" data-bs-dismiss="modal">No</button>
                                                             <button type="button" class="btn white">
-                                                                <a class="no-underline" href="{% url 'cancel_booking' booking.id %}">Yes</a>
+                                                            <a class="no-underline" href="{% url 'cancel_booking' booking.id %}">Yes</a>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -96,7 +96,8 @@
                                     </tbody>
                                     {% empty %} 
                                     <tr>
-                                        <td colspan="5">There are no booked appointments</td> <!-- If there are no bookings -->
+                                        <td colspan="5">There are no booked appointments</td>
+                                        <!-- If there are no bookings -->
                                     </tr>
                                     {% endfor %}
                                 </table>
@@ -106,7 +107,7 @@
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <a class="btn btn-dark {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" role="button">Logout</a>
                     </div>
-                    {% else %}
+                    {% else %} <!-- If User needs to register or login  -->
                     <div class="col-12 container d-flex flex-column justify-content-center align-items-center text-center min-vh-100 text-color">
                         <h2>Welcome</h2>
                         <hr>
