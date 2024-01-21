@@ -72,7 +72,7 @@
                                             <!-- Cancel Booking Modal -->
                                             <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content">
+                                                    <div class="modal-content z-index">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}"> Cancel Booking for {{ booking.user }}? </h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -107,7 +107,7 @@
                         <a class="btn btn-dark {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}" role="button">Logout</a>
                     </div>
                     {% else %}
-                    <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+                    <div class="col-12 container d-flex flex-column justify-content-center align-items-center text-center min-vh-100 text-color">
                         <h2>Welcome</h2>
                         <hr>
                         <p>Please Login or Register for Booking a Table</p>

@@ -30,95 +30,6 @@ body {
     
 }
 
-/* Reservations Page */
-
-.btn {
-    color: black;
-    background-color: #f05f40;
-}
-
-.btn:hover {
-    background-color: #7c280c;
-}
-
-.cancel-button {
-    color: red;
-}
-
-.white{
-    background-color: white !important;
-}
-
-.no-underline{
-    color: red;
-    text-decoration: none;
-}
-
-.no-cancel-button{
-    color: green;
-}
-
-.no-line{
-    text-decoration: none;
-    color: black;
-}
-
-.alert-dismissible {
-    display: flex;
-    width: 100%;
-    position: relative;
-    top: 80px;
-    justify-content: center;
-    z-index: 4;
-    font-size: larger;
-
-}
-
-.table {
-    --bs-table-bg: none;
-    --bs-table-color: white;
-    --bs-table-bg: none;
-}
-
-.col-12 {
-    z-index: 5;
-}
-
-.text-color {
-    color: white;
-}
-
-
-/* cancel booking modal */
-.modal-content {
-	color: black;
-	border: 3px solid black;
-	border-radius: 10px;
-}
-
-.modal-header {
-	background: rgba(var(--theme-four), 1);
-}
-
-.modal-body span {
-	color: rgba(var(--theme-five), 1);
-	font-weight: 500;
-}
-
-.modal-footer {
-	justify-content: center
-}
-
-.opaque-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 55%;
-}
-
 /* Navbar */
 
 .navalert-container {
@@ -134,7 +45,7 @@ body {
     font-family: 'Dancing Script', cursive;
     margin-bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.45);
     border: 0;
     font-size: 20px;
     padding-right: 10px;
@@ -193,6 +104,102 @@ body {
     height: 5px;
     border: 0;
     background-color: #fff;
+}
+
+/* Reservations Page */
+
+.btn {
+    color: black;
+    background-color: #f05f40;
+}
+
+.btn:hover {
+    background-color: #7c280c;
+}
+
+.cancel-button {
+    color: red;
+}
+
+.white{
+    background-color: white !important;
+}
+
+.no-underline{
+    color: red;
+    text-decoration: none;
+}
+
+.no-cancel-button{
+    color: green;
+}
+
+.no-line{
+    text-decoration: none;
+    color: black;
+}
+
+.alert-dismissible {
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    justify-content: center;
+    z-index: 4;
+    font-size: larger;
+
+}
+
+.table {
+    --bs-table-bg: none;
+    --bs-table-color: white;
+    --bs-table-bg: none;
+}
+
+.col-12 {
+    z-index: 5;
+}
+
+.text-color {
+    color: white;
+}
+
+.z-index {
+    z-index: 6;
+}
+
+/* cancel booking modal */
+.modal-content {
+	color: black;
+	border: 3px solid black;
+	border-radius: 10px;
+}
+
+.modal-backdrop.show{
+    z-index: 4;
+}
+
+.modal-header {
+	background: rgba(var(--theme-four), 1);
+}
+
+.modal-body span {
+	color: rgba(var(--theme-five), 1);
+	font-weight: 500;
+}
+
+.modal-footer {
+	justify-content: center
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 55%;
 }
 
 /*-----------------Page Headers */
@@ -276,7 +283,7 @@ body {
 /*----------------------Footer*/
 
 footer {
-    background-color: #525252;
+    background-color: #2d2b2b;
     color: #fafafa;
     min-height: 90px;
     margin: 0;
