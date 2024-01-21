@@ -5,6 +5,11 @@
     {% trans "Signup" %}
 {% endblock head_title %}
 {% block content %}
+
+<div class="container-fluid callout-container">
+    <div class="opaque-overlay">&nbsp;
+        <img class="callout-container opaque-overlay img-fluid" src="{% static 'img/table_restaurant.jpg' %}">
+    </div>
     <div class="container d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
         <h2>Sign Up</h2>
         <p>
@@ -30,4 +35,5 @@
             {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
         {% endif %}
     </div>
+</div>
 {% endblock content %}

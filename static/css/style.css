@@ -76,10 +76,16 @@ body {
 
 .table {
     --bs-table-bg: none;
+    --bs-table-color: white;
+    --bs-table-bg: none;
 }
 
 .col-12 {
     z-index: 5;
+}
+
+.text-color {
+    color: white;
 }
 
 
@@ -110,7 +116,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 70%;;
+    opacity: 55%;
 }
 
 /* Navbar */

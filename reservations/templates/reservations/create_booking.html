@@ -2,21 +2,27 @@
 {% load static %}
 {% url 'index' as index_url %}
 {% block content %}
-<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
-    <div id="booking-form-container" class="row">
-        <div class="col">
-            <h1>Booking</h1>
-            <hr>
-            <form id="booking-form" method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <p>
-                    <button class="btn" type="submit" role="button">Submit</button>
-                <hr>
-                <a class="btn" href="{% url 'reservations' %}" role="button">Go Back</a>
-                </p>
-            </form>
-        </div>
+
+<div class="container-fluid callout-container">
+    <div class="opaque-overlay">&nbsp;
+        <img class="callout-container opaque-overlay img-fluid" src="{% static 'img/table_restaurant.jpg' %}">
     </div>
-</section>
+    <section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+        <div id="booking-form-container" class="row">
+            <div class="col-12 text-color">
+                <h1>Booking</h1>
+                <hr>
+                <form id="booking-form" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <p>
+                        <button class="btn" type="submit" role="button">Submit</button>
+                    <hr>
+                    <a class="btn" href="{% url 'reservations' %}" role="button">Go Back</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}
