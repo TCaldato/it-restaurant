@@ -1,25 +1,27 @@
+- **Readme still in development**
+
 # IT Restaurant
 
-Website being created using Django.
-You can see how it is checking:
+Step into the heart of Italy with our Italian restaurant website, a digital showcase of culinary excellence crafted using HTML, CSS, JS, and Python with the power of Django and Bootstrap frameworks. Immerse yourself in the flavors of Italy as you navigate through a visually stunning and user-friendly interface, mirroring the warmth of Italian hospitality. Explore our menu and experience the fusion of technology and tradition, all at your fingertips. Buon appetito!
 
+![mock-up images](---- "Website preview at different resolutions")
 
 [View the live project here](https://it-restaurant-42ee32c14928.herokuapp.com/)
 
 ## Table of contents
 
-1. [Introduction](#Introduction)
-    1. [Scenario](#Scenario)
+1. [Introduction](#introduction)
+    1. [About the Project IT Restaurant](#about-the-project-it-restaurant)
 2. [UX](#ux)
-    1. [User Stories](#User-Stories)
-    2. [Design Thinking](#Design-Thinking)
+    1. [User Stories](#user-stories)
+    2. [Design Thinking](#design-thinking)
 3. [Features](#features)
     1. [Data Model](#data-model)
     2. [Existing Features](#existing-features)
     3. [Input validation and error-checking](#input-validation-and-error-checking)
     4. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
-    1. [Main Language](#main-language)
+    1. [Languages](#languages)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
 5. [Testing](#testing)
     1. [Validator Testing](#validator-testing)
@@ -34,11 +36,23 @@ You can see how it is checking:
     1. [Code](#code)
 8. [Acknowledgements](#acknowledgements)
 
-## Introduction
-# IT Restaurant
+# Introduction
 
+## About the Project IT Restaurant
 
-........................
+A Full-Stack website was developed for this project, which utilizes business logic to manage a centralized dataset. A role-based access authentication mechanism was implemented to ensure secure access to the website's data. The website was built using a combination of HTML, CSS, JavaScript, Python, and the Django and Bootstrap frameworks, with Postgres serving as the relational database. An Agile approach was employed throughout the project. The project also involved the implementation of authorization, authentication, and permission features in a Full-Stack web application solution. Furthermore, the project utilized object-based software concepts to achieve its goals.
+
+## UX
+
+### User-Stories
+
+In the Agile approach, a "user story" is a technique that assists in capturing the user's perspective and needs. It is a simple, yet powerful tool that shifts the focus from documenting requirements to discussing them. A user story is a brief, informal description from a user's point of view that explains what they want to achieve with the product. It encourages collaboration between the development team and the user, as it sparks meaningful conversations about the features and functionality that the user story represents. This approach promotes a better understanding of the user's needs, resulting in a product that meets their requirements and delivers value to the user.
+
+The Agile User Story technique has been documented in a separate file. You can check by clicking [Here](.....)
+
+### Design Thinking
+
+------------------------
 
 ## Features
 ---------
@@ -54,7 +68,7 @@ You can see how it is checking:
 
 ## Technologies Used
 
-### Languages Used
+### Languages
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wikipedia")
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wikipedia")
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wikipedia")
@@ -62,23 +76,23 @@ You can see how it is checking:
 
 ### Frameworks, Libraries & Programs Used
 
-- [GitHub](https://github.com/) for repo storage and Agile project management using Kanban boards/issue tracking.
-- [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
-- [Python3 ](https://docs.python.org/3/) with the following modules
-    asgiref==3.7.2
-    backports.zoneinfo==0.2.1;python_version<"3.9"
-    dj-database-url==2.1.0
-    Django==5.0.1
-    django-allauth==0.59.0
-    django-summernote==0.8.20.0
-    gunicorn==20.1.0
-    oauthlib==3.2.0
-    psycopg2==2.9.6
-    PyJWT==2.3.0
-    python3-openid==3.2.0
-    requests-oauthlib==1.3.1
-    whitenoise==6.6.0
-    sqlparse==0.4.4
+- [GitHub](https://github.com/)
+- [Heroku](https://id.heroku.com/)
+- [Python3 ](https://docs.python.org/3/) with the following modules:
+     - asgiref==3.7.2
+     - backports.zoneinfo==0.2.1;python_version<"3.9"
+     - dj-database-url==2.1.0
+     - Django==5.0.1
+     - django-allauth==0.59.0
+     - django-summernote==0.8.20.0
+     - gunicorn==20.1.0
+     - oauthlib==3.2.0
+     - psycopg2==2.9.6
+     - PyJWT==2.3.0
+     - python3-openid==3.2.0
+     - requests-oauthlib==1.3.1
+     - whitenoise==6.6.0
+     - sqlparse==0.4.4
 - [Bootstrap](https://getbootstrap.com/)
 - [JQuery](https://jquery.com/) 
 - [Django](https://www.djangoproject.com/)
@@ -87,10 +101,10 @@ You can see how it is checking:
 - [Font Awesome](https://fontawesome.com/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
-- [W3C Markup Validator](https://validator.w3.org/) HTML linter
-- [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS linter
-- [JSHint](https://jshint.com/) JS linter
-- [PEP8](https://www.pythonchecker.com/) Python linter
+- [W3C Markup Validator](https://validator.w3.org/)
+- [Jigsaw](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
+- [PEP8](https://www.pythonchecker.com/)
 
 ## Testing
 
