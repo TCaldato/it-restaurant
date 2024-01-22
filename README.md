@@ -40,83 +40,67 @@ You can see how it is checking:
 
 ........................
 
+## Features
+---------
 
+### Design Features
 
+### Existing Features
+-----------------
 
 #### Remaining Bugs
 
 - There are no remaining bugs found.
 
-[Back to top](#battleships-game)
+## Technologies Used
+
+### Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wikipedia")
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wikipedia")
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wikipedia")
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "Link to JS Wikipedia")
+
+### Frameworks, Libraries & Programs Used
+
+- [GitHub](https://github.com/) for repo storage and Agile project management using Kanban boards/issue tracking.
+- [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
+- [Python3 ](https://docs.python.org/3/) with the following modules
+    asgiref==3.7.2
+    backports.zoneinfo==0.2.1;python_version<"3.9"
+    dj-database-url==2.1.0
+    Django==5.0.1
+    django-allauth==0.59.0
+    django-summernote==0.8.20.0
+    gunicorn==20.1.0
+    oauthlib==3.2.0
+    psycopg2==2.9.6
+    PyJWT==2.3.0
+    python3-openid==3.2.0
+    requests-oauthlib==1.3.1
+    whitenoise==6.6.0
+    sqlparse==0.4.4
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery](https://jquery.com/) 
+- [Django](https://www.djangoproject.com/)
+- [Django Templating](https://docs.djangoproject.com/en/4.0/ref/templates/language/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Font Awesome](https://fontawesome.com/)
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- [W3C Markup Validator](https://validator.w3.org/) HTML linter
+- [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS linter
+- [JSHint](https://jshint.com/) JS linter
+- [PEP8](https://www.pythonchecker.com/) Python linter
+
+## Testing
+
+This process has been documented separately in [Testing](-------)
 
 ## Deployment
 
-### Deploying on GitHub Pages
+The site was deployed early closely following Code Institute guides.
 
-To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
-
- 1. Log into GitHub or create an account.
- 2. Locate the GitHub Repository.
- 3. At the top of the repository, select Settings from the menu items.
- 4. Scroll down the Settings page to the "Pages" section.
- 5. Under "Source" click the drop-down menu labeled "None" and select "Main".
- 6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
- 7. Scroll back down to the "Pages" section to retrieve the deployed link.
-
-### GitHub Forking and Cloning
-
-To fork and clone the project, you can get more information on  you will need to follow these steps:
-
-1. Forking a GitHub repository.
-
-    You might fork a project to propose changes to the upstream, or original, repository. In this case, it's good practice to regularly sync your fork with the upstream repository. To do this, you'll need to use Git on the command line.
-    - Navigate to the repository you wish to fork.
-    - In the top-right corner of the page, click Fork.
-    - Under "Owner," select the dropdown menu and click an owner for the forked repository.
-    - By default, forks are named the same as their upstream repositories. Optionally, to further distinguish your fork, in the "Repository name" field, type a name.
-    - Optionally, in the "Description" field, type a description of your fork.
-    - Click Create fork.
-
-2. Cloning your forked repository.
-
-    - Navigate to your forked repository.
-    - Above the list of files, click 'Code'.
-    - To clone the repository using HTTPS:
-        - Under "Clone with HTTPS", click the copy icon (a clipboard).
-    - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority:
-        - Click 'Use SSH', then click the copy icon.
-    - To clone a repository using GitHub CLI:
-        - Click 'Use GitHub CLI', then click the copy icon.
-    - Open Git Bash.
-    - Change the current working directory to the location where you want the cloned directory.
-    - Type git clone, and then paste the URL you copied earlier. It will look like this:
-        git clone https://hostname/YOUR-USERNAME/repo-name
-    - Press Enter. Your local clone will be created.
-
-### Deploying on Heroku
-
-To deploy this project to Heroku from its GitHub repository, the following steps were taken:
-
-1. In your repository, type "pip freeze > requirements.txt" to create the list of dependencies to the requirements.txt file. Save, commit and push your changes to GitHub.
-
-2. Create an account with [Heroku](https://www.heroku.com/ "Link to Heroku site"), selecting Python as the 'Primary development language'.
-
-3. Go to your emails and click the link to verify your email address. The link will bring you to a page where you can create a password. Create a password and log in.
-
-4. On the dashboard, click the 'create new app' button. Enter a unique name for your app and select your region. Click 'Create App'.
-
-5. Go to the settings tab and click 'Reveal Config Vars'. Enter PORT as the KEY value and 8000 as the VALUE value.
-
-6. Click 'Add Buildpack' and select 'Python' and 'Nodejs'. Python must be on the top of the list. Click and drag the buildpacks to the correct positions if needed.
-
-7. Go to the deploy tab and, under 'Deployment method', click 'GitHub' and then 'Connect to GitHub'.
-
-8. In 'Connect to GitHub', search for the repository you wish to use, then click 'Connect'.
-
-9. If you 'Enable Automatic Deploys', Heroku will rebuild the app every time you push a change to GitHub. You can also choose to manually deploy using the 'Deploy Branch' option. Heroku will build the app and when it is finished, click the 'View' button to open the terminal.
-
-[Back to top](#it-restaurant)
-
+This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
 
 
 ## Credits
