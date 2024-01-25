@@ -199,4 +199,4 @@ Log into ElephantSQL to access your dashboard:
 
 Now your deployed app is connected to your PostgreSQL cloud database.
 
-**These steps are current to the time of deployment and may change in the future.**
+** These steps are current to the time of deployment and may change in the future.**
