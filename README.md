@@ -15,6 +15,8 @@ Step into the heart of Italy with our Italian restaurant website, a digital show
 2. [UX](#ux)
     1. [User Stories](#user-stories)
     2. [Design Thinking](#design-thinking)
+    3. [Intuitive Design](#intuitive-design)
+    4. [Database Design](#database-design)
 3. [Features](#features)
     1. [Data Model](#data-model)
     2. [Existing Features](#existing-features)
@@ -48,27 +50,60 @@ A Full-Stack website was developed for this project, which utilizes business log
 
 In the Agile approach, a "user story" is a technique that assists in capturing the user's perspective and needs. It is a simple, yet powerful tool that shifts the focus from documenting requirements to discussing them. A user story is a brief, informal description from a user's point of view that explains what they want to achieve with the product. It encourages collaboration between the development team and the user, as it sparks meaningful conversations about the features and functionality that the user story represents. This approach promotes a better understanding of the user's needs, resulting in a product that meets their requirements and delivers value to the user.
 
-The Agile User Story technique has been documented in a separate file. You can check by clicking [Here](.....)
+The Agile User Story technique has been documented in a separate file. You can check by on [Agile file](AGILE.md)
 
 ### Design Thinking
 
-------------------------
+In order to optimize user experience on the developed website, it is important to apply a Design Thinking approach to determine the most useful features. However, given the time constraints of a hard deadline, it is necessary to assess the feasibility of a student developer delivering prioritized features. It is worth mentioning that the project must incorporate CRUD functionality, as per the assessment criteria, which provides a broad outline of the fundamental requirements.
+
+During a preliminary brainstorming session, a few ideas were suggested to enhance the website's user experience:
+
+| Feature                                 | Importance | Feasibility |
+|:----------------------------------------|:----------:|:-----------:|
+| Create personal account                 | 5          | 5           |
+| Update account information              | 5          | 5           |
+| Make an appointment                     | 5          | 5           |
+| Review latest appointment date/time     | 3          | 4           |
+| Able to change/cancel an appointment    | 3          | 4           |
+| Send client booking detail via email    | 2          | 2           |
+| View history of all appointments made   | 2          | 3           |
+| Owner has a view of reservations made   | 4          | 4           |
+| **Overall Score**                       | **29**     | **32**      |
+
+The analysis of the feasibility and importance scores indicates that the project is both practically achievable and highly valuable. Therefore, based on the data, the project is deliverable.
+
+### Intuitive Design
+
+The primary objective was to develop a restaurant website that is easy to use and navigate. To achieve this, several crucial factors were taken into account. 
+
+Firstly, it was essential to choose an attractive layout that is simple to navigate. One approach used was to keep the navigation bar at the top of the page, where it can be easily accessed by users. Additionally, all pages and buttons were labeled with clear and concise titles that accurately describe their content. For instance, "Home," "Menu," and "Reservations." 
+
+Another key aspect to consider is consistency in the website's design across all pages. This was achieved by maintaining the same font, color scheme, and size throughout the entire site. By keeping a consistent design, a cohesive and intuitive website was created that is easy for users to comprehend and navigate. 
+
+Finally, the website was optimized for different devices, including desktops, laptops, tablets, and smartphones. This was accomplished using responsive design techniques that automatically adjust the website's layout depending on the user's device. By optimizing the website for various devices, a seamless user experience was provided to all visitors, regardless of the platform they use.
+
+### Database Design
+
+-----------------------------------
+
+[Back to top](#it-restaurant)
 
 ## Features
----------
-
-### Design Features
 
 ### Existing Features
------------------
+
+Landing Page
 
 #### Remaining Bugs
 
 - There are no remaining bugs found.
 
+[Back to top](#it-restaurant)
+
 ## Technologies Used
 
 ### Languages
+
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wikipedia")
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets "Link to CSS Wikipedia")
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wikipedia")
@@ -108,7 +143,7 @@ The Agile User Story technique has been documented in a separate file. You can c
 
 ## Testing
 
-This process has been documented separately in [Testing](-------)
+This process has been documented separately in [Testing](testing.md)
 
 
 ## Deployment

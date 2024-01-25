@@ -6,48 +6,6 @@ This allowed me to work through any potential issues and make necessary adjustme
 Below are the detailed steps that were carefully followed to ensure that everything worked seamlessly and without any issues.
 
 
-## Deploying on GitHub Pages
-
-To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
-
- 1. Log into GitHub or create an account.
- 2. Locate the GitHub Repository.
- 3. At the top of the repository, select Settings from the menu items.
- 4. Scroll down the Settings page to the "Pages" section.
- 5. Under "Source" click the drop-down menu labeled "None" and select "Main".
- 6. Upon selection, the page will automatically refresh meaning that the website is now deployed.
- 7. Scroll back down to the "Pages" section to retrieve the deployed link.
-
-### GitHub Forking and Cloning
-
-To fork and clone the project, you can get more information on  you will need to follow these steps:
-
-1. Forking a GitHub repository.
-
-    You might fork a project to propose changes to the upstream, or original, repository. In this case, it's good practice to regularly sync your fork with the upstream repository. To do this, you'll need to use Git on the command line.
-    - Navigate to the repository you wish to fork.
-    - In the top-right corner of the page, click Fork.
-    - Under "Owner," select the dropdown menu and click an owner for the forked repository.
-    - By default, forks are named the same as their upstream repositories. Optionally, to further distinguish your fork, in the "Repository name" field, type a name.
-    - Optionally, in the "Description" field, type a description of your fork.
-    - Click Create fork.
-
-2. Cloning your forked repository.
-
-    - Navigate to your forked repository.
-    - Above the list of files, click 'Code'.
-    - To clone the repository using HTTPS:
-        - Under "Clone with HTTPS", click the copy icon (a clipboard).
-    - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority:
-        - Click 'Use SSH', then click the copy icon.
-    - To clone a repository using GitHub CLI:
-        - Click 'Use GitHub CLI', then click the copy icon.
-    - Open Git Bash.
-    - Change the current working directory to the location where you want the cloned directory.
-    - Type git clone, and then paste the URL you copied earlier. It will look like this:
-        git clone https://hostname/YOUR-USERNAME/repo-name
-    - Press Enter. Your local clone will be created.
-
 ## Deploying on Heroku
 
 In order to deploy a basic application on Heroku using Github, the following steps were taken:
@@ -199,4 +157,6 @@ Log into ElephantSQL to access your dashboard:
 
 Now your deployed app is connected to your PostgreSQL cloud database.
 
-** These steps are current to the time of deployment and may change in the future.**
+**These steps are current to the time of deployment and may change in the future.**
+
+Back to Readme file [README.md](README.md)
