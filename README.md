@@ -66,7 +66,6 @@ The Agile User Story technique has been documented in a separate file. You can c
 
 - There are no remaining bugs found.
 
-<<<<<<< HEAD
 ## Technologies Used
 
 ### Languages
