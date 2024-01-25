@@ -110,13 +110,12 @@ The Agile User Story technique has been documented in a separate file. You can c
 
 This process has been documented separately in [Testing](-------)
 
-=======
->>>>>>> b45229a (added static/readme folder with agile/deployment/features/test folders. Added testing.md and deployment.md file. Added images to features and deployment folders)
+
 ## Deployment
 
 The site was deployed early closely following Code Institute guides.
 
-This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
+This process has been documented separately in [deployment.md](deployment.md)
 
 
 ## Credits
