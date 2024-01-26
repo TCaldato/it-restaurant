@@ -90,9 +90,115 @@ Finally, the website was optimized for different devices, including desktops, la
 
 ## Features
 
-### Existing Features
+### The Landing Page
 
-Landing Page
+When Users arrive at the restaurant's landing page, they will immediately notice the Navigation bar on the top of the page. The Navigation bar is designed to be easy to use, with the restaurant's name on the left-hand side and on the right-hand side three important links. These links include the Home link, which will redirect users back to the landing page, the Menu link, which provides a downloadable PDF file of the restaurant's menu, and the Reservations link, which redirects users to the booking webpage. 
+    
+In addition to the Navigation bar, the landing page will also feature a welcoming message addressed to the customer and also include a photograph of a delicious dish from the restaurant.
+
+![Landing Page](static/readme/features/land-page.jpg)
+
+[Back to top](#it-restaurant)
+
+### Main Page Content
+
+The main page of the restaurant is divided into three sections: Our Story, Our Food, and Reserve a Table. 
+
+The Our Story section has a small text that explains about the restaurant. 
+
+![Our Story](static/readme/features/our-story.jpg)
+
+The Our Food section has three identical parts consisting of a picture of a dish, a brief description of the restaurant and its dishes, and two buttons - one for the Restaurant Menu and one for Reservations. These buttons are placed in all three sections to make it easier for the users to find what they need - the restaurant's menu and how to book a table.
+
+![Our Food](static/readme/features/our-food.png)
+
+The Reserve a Table section is designed to draw attention to the Menu Button and Reservations.
+
+![Reserve a Table](static/readme/features/reserve-table.png)
+
+### Footer
+
+In the footer section, there are four parts. The first part displays the name of the restaurant along with a phrase. The second part is "Discover" and includes links to the menu and reservation pages. The third part is "Contact" and displays restaurant information such as the address and ways to contact them. The last part is "Social" and includes links to the restaurant's Facebook and Instagram pages.
+
+![Footer](static/readme/features/footer.jpg)
+
+### Menu
+
+The Menu link provides a downloadable PDF file of the restaurant's menu.
+
+![Menu](static/readme/features/menu.jpg)
+
+
+### Reservations
+
+#### Sign Up or Sign In
+
+When customers visit the reservations webpage, they will be presented with the option to either Sign Up or Sign In. If it is their first time accessing the restaurant site, they can click on the "Sign Up" button to create a new account. If they are returning customers who have already registered with us, they can choose to Sign In.
+
+![Register or Login](static/readme/features/register-login.jpg)
+
+- **Sign Up Page**
+
+There is a Sign up form for new customer. It is a Standard allauth sign up page adapted to the site's theme.
+
+![Sign Up](static/readme/features/signup.jpg)
+
+- **Sign In Page**
+
+There is a Sign In form to be filled in. Also is a Standard allauth sign in page adapted to the site's theme.
+
+![Sign In](static/readme/features/signin.jpg)
+
+#### Already Registered Customer
+
+When a customer is signed in, they will have access to the Booking webpage. On this page, they will find information about their own reservation along with two options - one to edit the booking they have already made and the other to cancel it. They will also be able to view information about other reservations, but they will not have the options to edit or cancel them. It's important to note that customers will not have access to the names of other customers. They will only have access to information such as the date, time, and number of people booked. It is intended that they use this information to book an appointment that doesn't overlap with an existing one.
+
+On this same webpage, there will be two buttons available: one for booking and the other for logging out.
+
+![Reservation Page](static/readme/features/iza-booking.jpg)
+
+- **Booking Page**
+
+On the booking page, users can select a date and time to reserve a table at the restaurant. The available timeslots are between 6:00 PM to 9:30 PM. To make things simpler, the form includes an HTML date picker and dropdown menus with options that are based on the booking model. This helps to streamline the data entry process.Users can also specify the number of people coming along, with a maximum limit of 10 people. If the number of guests exceeds 10, they will need to contact the restaurant directly for reservations. There are two buttons available on the page, one to submit the reservation and the other to go back to the reservations webpage.
+
+![Booking](static/readme/features/booking.jpg)
+
+
+- **Edit Page**
+
+The Edit page contains the same information as the booking page. Users can modify the date, time, and number of guests(limited to 10 guests).
+
+![Edit](static/readme/features/edit-booking.jpg)
+
+- **Cancel Modal**
+
+When users try to cancel a booking, a modal window will appear, prompting them to confirm their choice by selecting either "Yes" or "No."
+
+![Cancel](static/readme/features/cancel-booking.jpg)
+
+- **Sign out**
+
+Users can log out of their page by clicking on the Logout button on the Reservations page. This will redirect the user to a confirmation page.
+
+![Sign out](static/readme/features/signout.jpg)
+
+### Alerts
+
+The site has been designed using the Django framework, which enables the implementation of customised alerts that are tailored to the needs of the user. These alerts provide valuable feedback to the user. The use of Django also ensures that the alerts are delivered in a consistent and reliable manner, enhancing the overall user experience.
+
+![Msg Booked](static/readme/features/msg-already-booked.jpg)
+
+![Msg No Booked Available](static/readme/features/msg-noavailable-booking.jpg)
+
+![Msg SigOut](static/readme/features/msg-signout.jpg)
+
+
+
+
+
+
+
+
 
 #### Remaining Bugs
 

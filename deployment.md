@@ -3,7 +3,7 @@
 To ensure a smooth submission process, I made an initial effort to deploy this project on Heroku as early as possible. 
 This allowed me to work through any potential issues and make necessary adjustments with ample time before the submission deadline.
 
-Below are the detailed steps that were carefully followed to ensure that everything worked seamlessly and without any issues.
+Below are the detailed steps that were carefully followed the **Code Institute** guides to ensure that everything worked seamlessly and without any issues.
 
 
 ## Deploying on Heroku
@@ -16,7 +16,7 @@ In order to deploy a basic application on Heroku using Github, the following ste
 4. Set up project to use a relational database (PostgreSQL)
 5. Connect Heroku to the PostgreSQL database
 
-### Install Django with required packages.
+## Install Django with required packages.
 
 *Django*, a full stack framework will support this project.
 
@@ -42,7 +42,7 @@ In the terminal, type *pip3 freeze --local > requirements.txt*.  This file tells
 
 ![Requirements](static/readme/deployment/requirements.png)
 
-### Create a new Django project.
+## Create a new Django project.
 
 I created a new *project* called *it_project* typing the following to the terminal, `django-admin startproject it_project`
 This will create new folder called `it_project` and a `manage.py` file in the root directory.
@@ -76,7 +76,7 @@ In the terminal, type *python3 manage.py runserver* to verify local deployment. 
 
 Confirm the text *Hello, World!* is displayed on the page.
 
-### Deploy project to Heroku
+## Deploy project to Heroku
 
 Create the Heroku app:
 
@@ -91,14 +91,14 @@ Create the Heroku app:
 
 
 
-### Set up project to use a relational database (PostgreSQL)
+## Set up project to use a relational database (PostgreSQL)
 
 For this project, an account was created for **ElephantSQL** that is a PostgreSQL database hosting service that uses several cloud-hosted platforms. 
 
 The steps to create a PostgreSQL instance were followed according to the Code Institute course and can be done by following the steps below:
 
 
-#### Create PostgreSQL instance
+### Create PostgreSQL instance
 
 Log into ElephantSQL to access your dashboard:
 
@@ -126,7 +126,7 @@ Log into ElephantSQL to access your dashboard:
 
 ![ElephantSQL ](static/readme/deployment/elephant4.png)
 
-#### Connect database to code
+### Connect database to code
 
 8. Return to your workspace and open the *it_project/settings.py* file. Change the value of *DEBUG* to *True*
 9. Create a file named env.py at the top level of the project.
@@ -148,7 +148,7 @@ Log into ElephantSQL to access your dashboard:
 15. Deploy the project. Return to your workspace and open the it_restaurant/settings.py file. Change the value of DEBUG back to False as this will ensure the production deployed app is secure. Git add, commit and push your updated code to GitHub. Return to your Heroku dashboard and go to your it_restaurant app. Click on the Deploy tab. Do a manual deployment.
 
 
-### Connect Heroku to the PostgreSQL database
+## Connect Heroku to the PostgreSQL database
 
 1. Once the deployment is complete click on Reveal Config Vars in the Settings tab on Heroku.
 2. Add a new config var with a key of DATABASE_URL and the value of the ElephantSQL URL.
