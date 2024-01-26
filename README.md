@@ -122,12 +122,13 @@ In the footer section, there are four parts. The first part displays the name of
 
 ![Footer](static/readme/features/footer.jpg)
 
+[Back to top](#it-restaurant)
+
 ### Menu
 
 The Menu link provides a downloadable PDF file of the restaurant's menu.
 
 ![Menu](static/readme/features/menu.jpg)
-
 
 ### Reservations
 
@@ -135,7 +136,7 @@ The Menu link provides a downloadable PDF file of the restaurant's menu.
 
 When customers visit the reservations webpage, they will be presented with the option to either Sign Up or Sign In. If it is their first time accessing the restaurant site, they can click on the "Sign Up" button to create a new account. If they are returning customers who have already registered with us, they can choose to Sign In.
 
-![Register or Login](static/readme/features/register-login.jpg)
+![Register or Login](static/readme/features/signup-signin.jpg)
 
 - **Sign Up Page**
 
@@ -148,6 +149,8 @@ There is a Sign up form for new customer. It is a Standard allauth sign up page 
 There is a Sign In form to be filled in. Also is a Standard allauth sign in page adapted to the site's theme.
 
 ![Sign In](static/readme/features/signin.jpg)
+
+[Back to top](#it-restaurant)
 
 #### Already Registered Customer
 
@@ -186,25 +189,25 @@ Users can log out of their page by clicking on the Logout button on the Reservat
 
 The site has been designed using the Django framework, which enables the implementation of customised alerts that are tailored to the needs of the user. These alerts provide valuable feedback to the user. The use of Django also ensures that the alerts are delivered in a consistent and reliable manner, enhancing the overall user experience.
 
-![Msg Booked](static/readme/features/msg-already-booked.jpg)
+![Msg Booked](static/readme/features/msg-already.jpg)
 
-![Msg No Booked Available](static/readme/features/msg-noavailable-booking.jpg)
+![Msg No Booked Available](static/readme/features/msg-no-booking.jpg)
 
 ![Msg SigOut](static/readme/features/msg-signout.jpg)
 
+![Msg Appo. Confirm](static/readme/features/msg-app-confirm.jpg)
 
+![Msg Delete](static/readme/features/msg-delete.jpg)
 
+![Msg Edit](static/readme/features/msg-edit.jpg)
 
+![Msg Sign In](static/readme/features/msg-signin.jpg)
 
-
-
-
+[Back to top](#it-restaurant)
 
 #### Remaining Bugs
 
 - There are no remaining bugs found.
-
-[Back to top](#it-restaurant)
 
 ## Technologies Used
 
@@ -261,23 +264,21 @@ This process has been documented separately in [deployment.md](deployment.md)
 
 ## Credits
 
- - Using Multiple Database Tables With Django - CodeMy.com
-
-[Back to top](#it-restaurant)
-
-
-### Code
+- [Pixabay](https://pixabay.com/) - Link to Pixabay for Free Images.
 
 Various sources were consulted to gain a better understanding of the code being implemented. The following sites were most frequently utilized:
 
 - [Stack Overflow](https://stackoverflow.com/) - Link to Stack Overflow page.
 - [W3Schools](https://www.w3schools.com/) - Link to W3Schools page.
-- [Heroku](https://p3-battleships.herokuapp.com/) - Link to Code Institute game on Heroku.
 - [Python Package Index](https://pypi.org/) - Link to Python Package Index page.
 - [Pytlint Dev Documentation](https://pylint.readthedocs.io/en/latest/index.html) - Link to Pylint page.
-
-[Back to top](#it-restaurant)
+- [CodeMy.com](https://www.youtube.com/@Codemycom) - Link to YouTube page.
+- [Geeks for Geeks](https://www.geeksforgeeks.org/) - Link to Geeksforgeeks page.
+- [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page.
 
 ## Acknowledgements
 
-- .............
+- I am grateful to my tutor Seun for her unwavering support throughout my project. Her expert guidance and motivation helped me excel and achieve my goals. Additionally.
+- I would like to express my gratitude to my brother Rodrigo for his patience in helping and teaching me during difficult times.
+
+[Back to top](#it-restaurant)
