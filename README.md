@@ -18,25 +18,22 @@ Step into the heart of Italy with our Italian restaurant website, a digital show
     3. [Intuitive Design](#intuitive-design)
     4. [Database Design](#database-design)
 3. [Features](#features)
-    1. [Data Model](#data-model)
-    2. [Existing Features](#existing-features)
-    3. [Input validation and error-checking](#input-validation-and-error-checking)
-    4. [Future Features](#future-features)
+    1. [The Landing Page](#the-landing-page)
+    2. [Main Page Content](#main-page-content)
+    3. [Footer](#footer)
+    4. [Menu](#menu)
+    5. [Reservations](#reservations)
+    6. [Alerts](#alerts)
+    7. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
 5. [Testing](#testing)
-    1. [Validator Testing](#validator-testing)
-    2. [Bugs](#bugs)
-        - [Solved Bugs](#solved-bugs)
-        - [Remaining Bugs](#remaining-bugs)
-6. [Deployment](#deployment)
-    1. [Deploying on GitHub Pages](#deploying-on-github-pages)
-    2. [GitHub Forking and Cloning](#github-forking-and-cloning)
-    3. [Deploying on Heroku](#deploying-on-heroku)
-7. [Credits](#credits)
-    1. [Code](#code)
-8. [Acknowledgements](#acknowledgements)
+6. [Issues and Bugs](#issues-and-bugs)
+    1. [Remaining Bugs](#remaining-bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 # Introduction
 
@@ -84,7 +81,9 @@ Finally, the website was optimized for different devices, including desktops, la
 
 ### Database Design
 
------------------------------------
+When working with Django, it's important to have a clear understanding of the database architecture before creating models. This is where Entity Relationship Diagrams come in handy as they allow you to visualize the relationships between different tables. By doing so, it is possible save valuable time later on in the project by avoiding the need to recode. Fortunately, the system is quite simple and requires only two tables to be set up correctly.
+
+![ER Diagram](static/readme/features/restaurant-er.png)
 
 [Back to top](#it-restaurant)
 
@@ -203,11 +202,15 @@ The site has been designed using the Django framework, which enables the impleme
 
 ![Msg Sign In](static/readme/features/msg-signin.jpg)
 
+### Future Features
+
+This was my first time using Allauth, and it more than satisfied most of my project requirements. With Allauth, the user can easily edit, update, and delete their bookings in the front-end, which was the main priority of this project. However, one improvement that could be made in the future is to extend Allauth Forms to include the Profile Model, but this wasn't feasible due to time constraints.
+
+Another improvement that would be beneficial for this project is to add an email booking confirmation, which would send a personalized email to the user with the date, time, and number of people booked.
+
+Finally, it would be great to add a space for customers to leave their reviews about the restaurant.
+
 [Back to top](#it-restaurant)
-
-#### Remaining Bugs
-
-- There are no remaining bugs found.
 
 ## Technologies Used
 
@@ -243,6 +246,8 @@ The site has been designed using the Django framework, which enables the impleme
 - [Django Templating](https://docs.djangoproject.com/en/4.0/ref/templates/language/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Font Awesome](https://fontawesome.com/)
+- [LucidChart](https://www.lucidchart.com/pages/)
+- [Grammarly](https://app.grammarly.com/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 - [W3C Markup Validator](https://validator.w3.org/)
@@ -254,27 +259,38 @@ The site has been designed using the Django framework, which enables the impleme
 
 This process has been documented separately in [Testing](testing.md)
 
+## Issues and Bugs
+
+While developing the restaurant website, I encountered several errors and bugs that I had to seek help for on the internet. Listed below are some of them:
+
+- Bug 1:
+    
+
+### Remaining Bugs
+
+- There are no remaining bugs found.
 
 ## Deployment
 
 The site was deployed early closely following Code Institute guides.
 
-This process has been documented separately in [deployment.md](deployment.md)
+This process has been documented separately in [Deployment](deployment.md)
 
 
 ## Credits
 
 - [Pixabay](https://pixabay.com/) - Link to Pixabay for Free Images.
+- [Free Formatter](https://www.freeformatter.com/) - Link for Free Formatter for formatting all codes.
 
 Various sources were consulted to gain a better understanding of the code being implemented. The following sites were most frequently utilized:
 
-- [Stack Overflow](https://stackoverflow.com/) - Link to Stack Overflow page.
-- [W3Schools](https://www.w3schools.com/) - Link to W3Schools page.
-- [Python Package Index](https://pypi.org/) - Link to Python Package Index page.
-- [Pytlint Dev Documentation](https://pylint.readthedocs.io/en/latest/index.html) - Link to Pylint page.
-- [CodeMy.com](https://www.youtube.com/@Codemycom) - Link to YouTube page.
-- [Geeks for Geeks](https://www.geeksforgeeks.org/) - Link to Geeksforgeeks page.
-- [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page.
+- [Stack Overflow](https://stackoverflow.com/) - Link to Stack Overflow page, used for all questions related with the codes.
+- [W3Schools](https://www.w3schools.com/) - Link to W3Schools page, used especially for CSS search.
+- [Python Package Index](https://pypi.org/) - Link to Python Package Index page, used for support for Python code.
+- [Pytlint Dev Documentation](https://pylint.readthedocs.io/en/latest/index.html) - Link to Pylint page, used for support for Python code.
+- [CodeMy.com](https://www.youtube.com/@Codemycom) - Link to YouTube page, used as extra classes for Modules and tables.
+- [Geeks for Geeks](https://www.geeksforgeeks.org/) - Link to Geeksforgeeks page, used for support for Python code. 
+- [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page, used for support for Django. 
 
 ## Acknowledgements
 
