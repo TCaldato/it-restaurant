@@ -255,6 +255,8 @@ Finally, it would be great to add a space for customers to leave their reviews a
 - [JSHint](https://jshint.com/)
 - [PEP8](https://www.pythonchecker.com/)
 
+[Back to top](#it-restaurant)
+
 ## Testing
 
 This process has been documented separately in [Testing](testing.md)
@@ -264,7 +266,30 @@ This process has been documented separately in [Testing](testing.md)
 While developing the restaurant website, I encountered several errors and bugs that I had to seek help for on the internet. Listed below are some of them:
 
 - Bug 1:
-    
+
+    During the first deployment to Heroku, I encountered a bug. I am using the CodeAnywhere platform and when deploying to Heroku, I received an error related to **Ubuntu** on requirements file. Upon further investigation, I discovered that when using **pip3 freeze > requirements.txt**, the Ubuntu requirements were being saved. After researching this issue, I found that it is better to only keep in the requirements file what is actually going to be used. Therefore, I removed everything that was not planned to be used, especially the Ubuntu-related requirements, and it worked.
+
+- Bug 2:
+
+    While deploying my static files, I noticed that none of the images I had uploaded on Condeanywhere were showing up on Heroku. After spending some time trying to solve the problem, I went back to review the course materials and realized that I had forgotten to use the terminal to input the command **python3 manage.py collectstatic**. Once I ran this command, all the images appeared correctly on Heroku.
+
+- Bug 3: 
+
+    I encountered a third bug while trying to access the admin/ path. The first superuser I created was giving me an error when I tried to log in to the admin/ path. The error message said that the superuser could not be found, and I couldn't find a solution online. To solve the problem, I went back through all the course lessons and realized that I had forgotten to add **ACCOUNT_EMAIL_VERIFICATION = 'none'** to my settings. Once I added this, I created a new superuser before deploying on Heroku. After these changes, I was able to access the admin/ path without any issues. [Issue 17](https://github.com/TCaldato/it-restaurant/issues/17)
+
+- Bug 4:
+
+    The following error occurred due to an issue with the Codeanywhere platform. The error was: **WSGI application 'it_project.wsgi.application' could not be loaded; Error importing module**. I spent a considerable amount of time searching for the root cause of the problem, but couldn't find anything. Eventually, I gave up and, I decided to just restart the platform and reinstall all the packages. This solution worked and the error was resolved. [Issue 17](https://github.com/TCaldato/it-restaurant/issues/17)
+
+- Bug 5:
+
+    When attempting to view the bookings already made, the user names were being displayed alongside the reservation information, causing a data security problem. To rectify this situation, I sought help from my brother. Together, we discovered that I had used the *User* field to display the name of the **logged-in user** when creating a booking, which was displaying all registered users on the website. To fix this, I removed the *user* field from the ReservationForm, modified the create_booking view to set the user to the currently logged-in user directly, and modified the edit_booking in the same way as create_booking. As a result of these changes, the user names are now hidden, and only the reservation date, time, and number of people are displayed for all users. [Issue 19](https://github.com/TCaldato/it-restaurant/issues/19)
+
+- Bug 6:
+
+    All the alerts from the Django framework were displaying on the *admin/* path instead of specific pages when a user completed an action. To address this issue, I came across a helpful explanation on [Ordinary Coders](https://ordinarycoders.com/blog/article/django-messages-framework). It taught me how to correctly resolve the problem. [Issue 20](https://github.com/TCaldato/it-restaurant/issues/20)
+
+[Back to top](#it-restaurant)
 
 ### Remaining Bugs
 
@@ -290,11 +315,13 @@ Various sources were consulted to gain a better understanding of the code being 
 - [Pytlint Dev Documentation](https://pylint.readthedocs.io/en/latest/index.html) - Link to Pylint page, used for support for Python code.
 - [CodeMy.com](https://www.youtube.com/@Codemycom) - Link to YouTube page, used as extra classes for Modules and tables.
 - [Geeks for Geeks](https://www.geeksforgeeks.org/) - Link to Geeksforgeeks page, used for support for Python code. 
-- [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page, used for support for Django. 
+- [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page, used for support for Django.
+- [Ordinary Coders](https://ordinarycoders.com/blog/article/django-messages-framework) - Link for Ordinary coders, used for set the Django Alerts.
+- [Becky139/mutts-cuts](https://github.com/Becky139/mutts-cuts) - Link to Becky139, it was used as reference for Readme and Project Models.
 
 ## Acknowledgements
 
-- I am grateful to my tutor Seun for her unwavering support throughout my project. Her expert guidance and motivation helped me excel and achieve my goals. Additionally.
+- I am grateful to my tutor Seun for her support throughout my project. Her expert guidance helped me achieve my goals.
 - I would like to express my gratitude to my brother Rodrigo for his patience in helping and teaching me during difficult times.
 
 [Back to top](#it-restaurant)
