@@ -166,11 +166,30 @@ All buttons and links are working:
 
 ## Validation
 
+Passed in all validators below:
+
 ### HTML Validation
+
+[W3C Markup Validator](https://validator.w3.org/)
 
 [W3C Markup Validator](https://validator.w3.org/)
 
 
 ### CSS Validation
-[Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+[Jigsaw](https://jigsaw.w3.org/css-validator/)  
+
+![Jigsaw](static/readme/testing/css-valid.jpg "Jigsaw Validator")
+
+
+### JS Validation
+
+[JSHint](https://jshint.com/) 
+
+![Jshint](static/readme/testing/jshint.jpg "Jshint Validator")
+
+### Python Validation
+
+[PEP8](https://extendsclass.com/python-tester.html/ "Python Validator")
+
 
