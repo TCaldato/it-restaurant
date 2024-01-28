@@ -42,7 +42,7 @@ To ensure that the deployed site opens on the homepage, it was created a functio
 
 - **browser**
 
-![Test 4](static/readme/testing/tt4.jpg)
+![Test 4](static/readme/testing/tt4-1.jpg)
 
 ### 3. CSS file is conected
 
@@ -137,3 +137,40 @@ The model must be registered within the apps admin file:
 How Profile is a different table to User, it was added to the top of the models file *import post_save and reciever*:
 
 ![Test 18](static/readme/testing/tt18.png)
+
+## 7. Buttons and Links
+
+All buttons and links are working:
+
+- Reservations buttons:
+
+![GIF Reservations](static/readme/testing/gifs/reservation-button.gif)
+
+- Reservations buttons:
+
+![Menu](static/readme/testing/gifs/menu.gif)
+
+## 8. Sign In, Edit, Cancel and Sign Out
+
+- Once a user is signed in, they are authorized to access the booking system. As a result, they can see **only** their own name, but they also have the ability to view other bookings date and time of the reservation, as well as the number of people who will be attending.
+
+![GIF Sign In](static/readme/testing/gifs/signin.gif)
+
+- The Edit button and cancel Model is working as well:
+
+![GIF Edit/Cancel](static/readme/testing/gifs/edit-cancel.gif)
+
+- The Sign Out Button tested too:
+
+![GIF Sign Out](static/readme/testing/gifs/signout.gif)
+
+## Validation
+
+### HTML Validation
+
+[W3C Markup Validator](https://validator.w3.org/)
+
+
+### CSS Validation
+[Jigsaw](https://jigsaw.w3.org/css-validator/)
+
