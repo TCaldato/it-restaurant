@@ -1,5 +1,17 @@
 # Deployment
 
+## Table of contents
+
+1. [Introduction](#introduction)
+2. [Deploying on Heroku](#deploying-on-heroku)
+3. [Install Django with required packages](#install-django-with-required-packages)
+4. [Create a new Django project](#create-a-new-django-project)
+5. [Deploy project to Heroku](#deploy-project-to-heroku)
+6. [Set up project to use a relational database](#set-up-project-to-use-a-relational-database)
+7. [Connect Heroku to the PostgreSQL database](#connect-heroku-to-the-postgreSQL-database)
+
+## Introduction
+
 To ensure a smooth submission process, I made an initial effort to deploy this project on Heroku as early as possible. 
 This allowed me to work through any potential issues and make necessary adjustments with ample time before the submission deadline.
 
@@ -16,7 +28,7 @@ In order to deploy a basic application on Heroku using Github, the following ste
 4. Set up project to use a relational database (PostgreSQL)
 5. Connect Heroku to the PostgreSQL database
 
-## Install Django with required packages.
+## Install Django with required packages
 
 *Django*, a full stack framework will support this project.
 
@@ -42,7 +54,9 @@ In the terminal, type *pip3 freeze --local > requirements.txt*.  This file tells
 
 ![Requirements](static/readme/deployment/requirements.png)
 
-## Create a new Django project.
+[Back to top](#deployment)
+
+## Create a new Django project
 
 I created a new *project* called *it_project* typing the following to the terminal, `django-admin startproject it_project`
 This will create new folder called `it_project` and a `manage.py` file in the root directory.
@@ -76,6 +90,8 @@ In the terminal, type *python3 manage.py runserver* to verify local deployment. 
 
 Confirm the text *Hello, World!* is displayed on the page.
 
+[Back to top](#deployment)
+
 ## Deploy project to Heroku
 
 Create the Heroku app:
@@ -89,9 +105,9 @@ Create the Heroku app:
 4. Click on the Deploy tab in your Heroku app dashboard, connect to your GitHub repo and click on Deploy Branch.
 5. Click the Open app button to see your deployed app.
 
+[Back to top](#deployment)
 
-
-## Set up project to use a relational database (PostgreSQL)
+## Set up project to use a relational database
 
 For this project, an account was created for **ElephantSQL** that is a PostgreSQL database hosting service that uses several cloud-hosted platforms. 
 
@@ -126,6 +142,8 @@ Log into ElephantSQL to access your dashboard:
 
 ![ElephantSQL ](static/readme/deployment/elephant4.png)
 
+[Back to top](#deployment)
+
 ### Connect database to code
 
 8. Return to your workspace and open the *it_project/settings.py* file. Change the value of *DEBUG* to *True*
@@ -147,6 +165,7 @@ Log into ElephantSQL to access your dashboard:
 
 15. Deploy the project. Return to your workspace and open the it_restaurant/settings.py file. Change the value of DEBUG back to False as this will ensure the production deployed app is secure. Git add, commit and push your updated code to GitHub. Return to your Heroku dashboard and go to your it_restaurant app. Click on the Deploy tab. Do a manual deployment.
 
+[Back to top](#deployment)
 
 ## Connect Heroku to the PostgreSQL database
 
@@ -158,5 +177,7 @@ Log into ElephantSQL to access your dashboard:
 Now your deployed app is connected to your PostgreSQL cloud database.
 
 **These steps are current to the time of deployment and may change in the future.**
+
+[Back to top](#deployment)
 
 Back to Readme file [README.md](README.md)

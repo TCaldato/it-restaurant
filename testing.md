@@ -3,14 +3,19 @@
 ## Table of contents
 
 1. [Introduction](#introduction)
-2. [UX](#ux)
-    1. [User Stories](#user-stories)
-    2. [Design Thinking](#design-thinking)
-    3. [Intuitive Design](#intuitive-design)
-    4. [Database Design](#database-design)
-3. [Features](#features)
-    1. [The Landing Page](#the-landing-page)
-    2. [Main Page Content](#main-page-content)
+2. [Manual Testing](#manual-testing)
+    1. [Deployed website is working](#deployed-website-is-working)
+    2. [Site opens on the homepage](#site-opens-on-the-homepage)
+    3. [CSS file is conected](#css-file-is-conected)
+    4. [base.html is linked](#base.html-is-linked)
+    5. [Load index.html and base.html](#load-index.html-and-base.html)
+    6. [Check allauth working](#check-allauth-working)
+    7. [Create and Migrate a Module](#create-and-migrate-a-module)
+    8. [Buttons and Links](#buttons-and-links)
+    9. [Sign In, Edit, Cancel and Sign Out](#sign-In,-edit,-cancel-and-sign-out)
+3. [Validation](#validation)
+4. [Lighthouse](#lighthouse)
+5. [Browsers](#browsers)
 
 
 ## Introduction
@@ -22,6 +27,8 @@ In order to ensure that the project is executed according to the plan, a compreh
 ### 1. Deployed website is working
 
 To ensure the live project works properly, I followed all the steps that were provided by the Code Institute course. These steps are well documented in the latter sections of the [Deployment](deployment.md).
+
+[Back to top](#testing)
 
 ### 2. Site opens on the homepage
 
@@ -43,6 +50,8 @@ To ensure that the deployed site opens on the homepage, it was created a functio
 - **browser**
 
 ![Test 4](static/readme/testing/tt4-1.jpg)
+
+[Back to top](#testing)
 
 ### 3. CSS file is conected
 
@@ -74,6 +83,8 @@ Ensure that my own css and js files are linked correctly to base.html via head.h
 
 ![Test 10](static/readme/testing/tt10.jpg)
 
+[Back to top](#testing)
+
 - **Collectstatic**
 
 I included django.contrib.staticfiles in my INSTALLED_APPS in Setting. And Added:
@@ -89,7 +100,9 @@ I excluded DISABLE_COLLECTSTATIC on Heroku's Config Vars. I used the command to 
 
 ![Test 12](static/readme/testing/tt12.jpg)
 
-## 4. base.html is linked
+[Back to top](#testing)
+
+### 4. base.html is linked
 
 The main content is in *restaurant/template/restaurant/index.html*, and to ensure that base.html is included on index.html and in all the others html files, it is added on the top of the html files:
 
@@ -97,13 +110,13 @@ The main content is in *restaurant/template/restaurant/index.html*, and to ensur
 
 Following the *{% endblock %}* in the end of the page content.
 
-## 5. Load index.html and base.html
+### 5. Load index.html and base.html
 
 After everything is connected the page loads normally:
 
 ![GIF 1](static/readme/testing/gifs/gif1.gif)
 
-## 6. Check allauth working
+### 6. Check allauth working
 
 Allauth handled signup/login/logout. If User is not authenticated the Sign In and Sign up button will apper.
 
@@ -121,7 +134,9 @@ The authentication can be cheked on *reservatios/template/reservations/view_rese
 
 It is possible to check the resistration on *admin/* as well.
 
-## 7. Create and Migrate a Module
+[Back to top](#testing)
+
+### 7. Create and Migrate a Module
 
 - Type *python3 manage.py makemigrations --dry-run* to view unexecuted effect. These are the instructions to build a table.
 - Remove the  *--dry-run* flag to perform the action.
@@ -138,7 +153,9 @@ How Profile is a different table to User, it was added to the top of the models 
 
 ![Test 18](static/readme/testing/tt18.png)
 
-## 7. Buttons and Links
+[Back to top](#testing)
+
+### 8. Buttons and Links
 
 All buttons and links are working:
 
@@ -150,7 +167,7 @@ All buttons and links are working:
 
 ![Menu](static/readme/testing/gifs/menu.gif)
 
-## 8. Sign In, Edit, Cancel and Sign Out
+### 9. Sign In, Edit, Cancel and Sign Out
 
 - Once a user is signed in, they are authorized to access the booking system. As a result, they can see **only** their own name, but they also have the ability to view other bookings date and time of the reservation, as well as the number of people who will be attending.
 
@@ -164,6 +181,8 @@ All buttons and links are working:
 
 ![GIF Sign Out](static/readme/testing/gifs/signout.gif)
 
+[Back to top](#testing)
+
 ## Validation
 
 Passed in all validators below:
@@ -172,7 +191,7 @@ Passed in all validators below:
 
 [W3C Markup Validator](https://validator.w3.org/)
 
-[W3C Markup Validator](https://validator.w3.org/)
+![W3C Markup Validator](static/readme/testing/html-validator.jpg "W3C Markup Validator")
 
 
 ### CSS Validation
@@ -192,4 +211,35 @@ Passed in all validators below:
 
 [PEP8](https://extendsclass.com/python-tester.html/ "Python Validator")
 
+Tested all Python codes and all of them passed:
+
+![PEP8](static/readme/testing/python-validator.jpg "Python Validator")
+
+[Back to top](#testing)
+
+## Lighthouse
+
+![Lighthouse](static/readme/testing/lighthouse.png)
+
+## Browsers
+
+- Chrome:
+
+![Chrome](static/readme/testing/chrome.jpg)
+
+- Edge:
+
+![Edge](static/readme/testing/edge.jpg)
+
+- Firefox:
+
+![Firefox](static/readme/testing/firefox.jpg)
+
+- Opera:
+
+![Opera](static/readme/testing/opera.jpg)
+
+[Back to top](#testing)
+
+Back to Readme file [README.md](README.md)
 
