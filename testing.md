@@ -73,3 +73,67 @@ Ensure that my own css and js files are linked correctly to base.html via head.h
 ![Test 11](static/readme/testing/tt11.jpg)
 
 ![Test 10](static/readme/testing/tt10.jpg)
+
+- **Collectstatic**
+
+I included django.contrib.staticfiles in my INSTALLED_APPS in Setting. And Added:
+
+![Test 13](static/readme/testing/tt13.jpg)
+
+On the Terminal I imput the command **python3 manage.py collectstatic**
+
+
+- **Deleted DISABLE_COLLECTSTATIC**
+
+I excluded DISABLE_COLLECTSTATIC on Heroku's Config Vars. I used the command to push to GitHub and everything was working. 
+
+![Test 12](static/readme/testing/tt12.jpg)
+
+## 4. base.html is linked
+
+The main content is in *restaurant/template/restaurant/index.html*, and to ensure that base.html is included on index.html and in all the others html files, it is added on the top of the html files:
+
+![Test 14](static/readme/testing/tt14.jpg)
+
+Following the *{% endblock %}* in the end of the page content.
+
+## 5. Load index.html and base.html
+
+After everything is connected the page loads normally:
+
+![GIF 1](static/readme/testing/gifs/gif1.gif)
+
+## 6. Check allauth working
+
+Allauth handled signup/login/logout. If User is not authenticated the Sign In and Sign up button will apper.
+
+![GIF 2](static/readme/testing/gifs/gif2.gif)
+
+If the user is authenticated, their personal pages will be displayed instead of Sign In/Sign Up page.
+
+If User is not authenticated, They can Sign Up or Sign In:
+
+![GIF 3](static/readme/testing/gifs/gif3.gif).
+
+The authentication can be cheked on *reservatios/template/reservations/view_reservations.html:
+
+![Test 15](static/readme/testing/tt15.jpg)
+
+It is possible to check the resistration on *admin/* as well.
+
+## 7. Create and Migrate a Module
+
+- Type *python3 manage.py makemigrations --dry-run* to view unexecuted effect. These are the instructions to build a table.
+- Remove the  *--dry-run* flag to perform the action.
+- Use the *python3 manage.py showmigrations* command to see a list of existing migrations.
+- To build the table in the backend type *python3 manage.py migrate* into the terminal.
+
+The model must be registered within the apps admin file:
+
+![Test 17](static/readme/testing/tt17.jpg)
+
+![Test 16](static/readme/testing/tt16.png)
+
+How Profile is a different table to User, it was added to the top of the models file *import post_save and reciever*:
+
+![Test 18](static/readme/testing/tt18.png)
