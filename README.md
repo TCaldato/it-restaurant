@@ -317,7 +317,9 @@ Various sources were consulted to gain a better understanding of the code being 
 - [Geeks for Geeks](https://www.geeksforgeeks.org/) - Link to Geeksforgeeks page, used for support for Python code. 
 - [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page, used for support for Django.
 - [Ordinary Coders](https://ordinarycoders.com/blog/article/django-messages-framework) - Link for Ordinary coders, used for set the Django Alerts.
-- [Becky139/mutts-cuts](https://github.com/Becky139/mutts-cuts) - Link to Becky139, it was used as reference for Readme and Project Models.
+- [Simple is Better than Complex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) - Link for tutorial Django User Model
+- [Becky139/mutts-cuts](https://github.com/Becky139/mutts-cuts) - Link to Becky139, it was used as reference for Readme.
+
 
 ## Acknowledgements
 

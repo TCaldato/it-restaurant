@@ -64,7 +64,7 @@ After I opend the `settings.py` file in the `it_project` **project** folder and 
  - In views.py, import HttpResponse from django.http at the top of the file, *from django.http import HttpResponse*
  - Add the following view function to return a HttpResponse of "Hello, World!" *def my_restaurant(request): return HttpResponse("Hello, World!")*
  - In *it_restaurant/urls.py* import the *my_restaurant view*: *from restaurant.views import my_resaturant*.
- - Adde the new path to the urlpatterns: *path('restaurant/', my_resaturant, name='restaurant')*,
+ - Add the new path to the urlpatterns: *path('restaurant/', my_resaturant, name='restaurant')*,
 
 In the terminal, type *python3 manage.py migrate* to update the database schema used by Django.  
 
