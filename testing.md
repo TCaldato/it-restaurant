@@ -163,7 +163,7 @@ All buttons and links are working:
 
 ![GIF Reservations](static/readme/testing/gifs/reservation-button.gif)
 
-- Reservations buttons:
+- Menu buttons:
 
 ![Menu](static/readme/testing/gifs/menu.gif)
 
