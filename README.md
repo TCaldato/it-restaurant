@@ -1,10 +1,8 @@
-- **Readme still in development**
-
 # IT Restaurant
 
 Step into the heart of Italy with our Italian restaurant website, a digital showcase of culinary excellence crafted using HTML, CSS, JS, and Python with the power of Django and Bootstrap frameworks. Immerse yourself in the flavors of Italy as you navigate through a visually stunning and user-friendly interface, mirroring the warmth of Italian hospitality. Explore our menu and experience the fusion of technology and tradition, all at your fingertips. Buon appetito!
 
-![mock-up images](---- "Website preview at different resolutions")
+![mock-up images](static/readme/features/mockup.png "Website preview at different resolutions")
 
 [View the live project here](https://it-restaurant-42ee32c14928.herokuapp.com/)
 
@@ -298,7 +296,7 @@ While developing the restaurant website, I encountered several errors and bugs t
 
 ### Remaining Bugs
 
-- There are no remaining bugs found.
+- The only issue left is a bug affecting the responsiveness of the main image, "table_restaurant.jpg". When the image is reduced, it distorts itself. I have tried using **.img-fluid. max-width: 100%; and height: auto;** in Bootstrap, but it didn't work. I also attempted to make *callout-container* and *opaque-overlay* responsive, but this only made the image more distorted. I tried creating a new class and configuring it within **@media (max-width: 767.98px)** but to no avail. Unfortunately, due to time constraints, I was unable to continue searching for a solution to this problem.
 
 ## Deployment
 
@@ -323,7 +321,7 @@ Various sources were consulted to gain a better understanding of the code being 
 - [Django Project Forum](https://forum.djangoproject.com/) - Link to Django Project Forum page, used for support for Django.
 - [Ordinary Coders](https://ordinarycoders.com/blog/article/django-messages-framework) - Link for Ordinary coders, used for set the Django Alerts.
 - [Simple is Better than Complex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) - Link for tutorial Django User Model
-- [Becky139/mutts-cuts](https://github.com/Becky139/mutts-cuts) - Link to Becky139, it was used as reference for Readme.
+- [Becky139/mutts-cuts](https://github.com/Becky139/mutts-cuts) - Link to Becky139, it was used as reference for Readme and Project.
 
 
 ## Acknowledgements

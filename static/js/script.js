@@ -1,65 +1,41 @@
 /* jshint esversion: 8, jquery: true */
 
-/**
- * Initialize datepicker widget with specific settings
- */
- function initializeDatepicker() {
+
+// JavaScript code updated to be more modular and easier to maintain.
+// Help from Rodrigo Caldato: https://www.linkedin.com/in/rodrigo-caldato-391137115/
+
+
+// Function to initialize datepicker widget with specific settings
+function initializeDatepicker() {
     const datepicker = $("#datepicker");
-    
+
     datepicker.datepicker({
         dateFormat: "MM d, yy",
         minDate: 0,
         maxDate: "+12M +0D",
-    });
-
-    datepicker.datepicker("option", "showAnim", "fold");
-    datepicker.datepicker("setDate", '0');
+        showAnim: "fold",
+    }).datepicker("setDate", '0');
 }
 
-/**
- * Filter booking table by datepicker value
- */
-function filterResults() {
+// Function to filter booking table by given criteria
+function filterTable(criteria, selector) {
     const resultRows = document.querySelectorAll(".booking-row");
-    const filterData = $("#datepicker").val();
+    const filterValue = $(selector).text();
 
     resultRows.forEach(row => {
         row.classList.add("d-none");
-        if (row.innerText.includes(filterData)) {
+        if (row.innerText.includes(filterValue)) {
             row.classList.remove("d-none");
         }
     });
 }
 
-/**
- * Filter view-booking-table by current user
- */
-function myBookingsFilter() {
-    const resultRows = document.querySelectorAll(".booking-row");
-    const filterUser = $("#current-user").text();
-
-    resultRows.forEach(row => {
-        row.classList.add("d-none");
-        if (row.innerText.includes(filterUser)) {
-            row.classList.remove("d-none");
-        }
-    });
-}
-
-/**
- * Unfilter booking table by removing "d-none" class
- */
+// Function to remove "d-none" class from all rows
 function removeFilter() {
-    const resultRows = document.querySelectorAll(".booking-row");
-
-    resultRows.forEach(row => {
-        row.classList.remove("d-none");
-    });
+    $(".booking-row").removeClass("d-none");
 }
 
-/**
- * Handle button click to update selected value
- */
+// Function to handle button click and update selected value
 function handleButtonClick() {
     const val = $(this).val();
     $('.btn').removeClass('selected');
@@ -71,8 +47,14 @@ function handleButtonClick() {
 $(document).ready(function () {
     initializeDatepicker();
 
-    $("#datepicker").on("change", filterResults);
-    $("#table-filter-user").on("click", myBookingsFilter);
+    $("#datepicker").on("change", function () {
+        filterTable("date", "#datepicker");
+    });
+
+    $("#table-filter-user").on("click", function () {
+        filterTable("user", "#current-user");
+    });
+
     $("#refresh-table").on("click", removeFilter);
     $(".btn").on("click", handleButtonClick);
 });
