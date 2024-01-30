@@ -40,7 +40,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-tcaldato-it-restaurant-tk5mz7ywcd.us2.codeanyapp.com','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-tcaldato-it-restaurant-3nrxgzi4fh.us2.codeanyapp.com','.herokuapp.com']
 
 
 # Application definition

@@ -12,10 +12,8 @@ from django.core.exceptions import ValidationError
 # The number of appointments that can be taken
 num_appointments = 1
 
-# View to render upcoming bookings from the current date
 def view_reservation(request):
     """
-    View Reservation:
     Renders a view displaying upcoming bookings from the current date.
     """
     today_date = datetime.now()
@@ -23,10 +21,12 @@ def view_reservation(request):
     context = {"bookings": bookings}
     return render(request, "reservations/views_reservation.html", context)
 
-
-# View to handle the creation of a new booking
+ 
 @login_required()
 def create_booking(request):
+    """
+    View to handle the creation of a new booking
+    """
     if request.method == "POST":
         form = ReservationForm(request.POST)
         if form.is_valid():
@@ -77,12 +77,16 @@ def create_booking(request):
 @login_required()
 def edit_booking(request, booking_id):
     """
-    Edit booking:
-    Handles the editing of an existing booking for the logged-in user.
+    Handles the editing of an existing booking for the logged-in user or superuser.
     """
 
     # Get the existing booking or return a 404 if not found
-    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if not (request.user == booking.user or request.user.is_superuser):
+        # If the user is neither the owner of the booking nor a superuser, deny access
+        messages.error(request, "You don't have permission to edit this booking.")
+        return redirect("reservations")
 
     if request.method == "POST":
         # If the request method is POST, process the form data
@@ -93,10 +97,25 @@ def edit_booking(request, booking_id):
             chosen_time = form.cleaned_data["start_time"]
             num_people = form.cleaned_data["num_people"]
 
+            # Check if the total number of people booked for the chosen time exceeds the limit
+            total_people_booked = Booking.objects.filter(
+                date=chosen_date, start_time=chosen_time
+            ).exclude(id=booking_id).aggregate(total_people=Sum("num_people"))["total_people"]
+
+            if total_people_booked is None:
+                total_people_booked = 0
+
+            if total_people_booked + num_people > 15:
+                messages.error(
+                    request,
+                    f"No Booking available for {chosen_date} at {chosen_time}. Please choose another time.",
+                )
+                return redirect("edit_booking", booking_id)
+            
             # Check if there are conflicting bookings for the same date and time
             num_same_bookings = (
                 Booking.objects.filter(
-                    date=chosen_date, start_time=chosen_time, user=request.user
+                    date=chosen_date, start_time=chosen_time
                 )
                 .exclude(id=booking_id)
                 .count()
@@ -113,7 +132,7 @@ def edit_booking(request, booking_id):
                 form.save()
                 messages.success(
                     request,
-                    f"Your appointment for {request.user.username} has been changed.",
+                    f"The appointment has been changed successfully.",
                 )
                 return redirect("reservations")
     else:
@@ -128,7 +147,6 @@ def edit_booking(request, booking_id):
 @login_required()
 def cancel_booking(request, booking_id):
     """
-    Cancel reservation:
     Handles the cancellation of an existing booking for the logged-in user.
     """
 

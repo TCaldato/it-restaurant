@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-1. [Agile Frist Phase](#agile-frist-phase)
+1. [Agile First Phase](#agile-first-phase)
 1. [Agile Second Phase](#agile-second-phase)
 1. [Agile Third Phase](#agile-third-phase)
 1. [Agile Fourth Phase](#agile-fourth-phase)
@@ -10,7 +10,7 @@
 1. [Agile Sixth Phase](#agile-sixth-phase)
 1. [Agile Seventh Phase](#agile-seventh-phase)
 
-## Agile Frist Phase
+## Agile First Phase
 
 At the beginning of any project, it's essential to ensure that everything is set up correctly for deployment, and that's precisely what I focused on initially. I followed the Code Institute's steps as they provided a clear roadmap for starting a project, and the first step was to ensure that it was set up correctly for deployment on Heroku. 
 By doing so, I was able to avoid any potential future issues, such as bugs or other complications. Adhering to the Agile approach, I then moved on to the first phase of the project, which involved creating a comprehensive list of tasks that I needed to complete. This helped me to break down the project into smaller, more manageable chunks, allowing me to work more efficiently.
@@ -191,6 +191,10 @@ For this story, as per the suggestion of my mentor Koko, I decided to implement 
 - AC 2: User have access to cancel or edit only they own booking
 
 ![Enhancement 1](static/readme/agile/enhancement1.png)
+
+While I was reviewing and testing the code for final improvements, I encountered an error. When I tried to access the edit_booking as a Superuser, it threw a *Not Found The requested resource was not found on this server.* error. I checked the views_reservations.html and edit_booking.html files, and they appeared to be correct. However, after checking the views.py file, I found that the edit_booking was not allowed to be accessed by a Superuser. To fix this, I added the following code: *if not (request.user == booking.user or request.user.is_superuser):* to check if the user is either the owner of the booking or a Superuser before allowing access to the edit form.
+
+![Bug 4](static/readme/agile/bug4.png)
 
 - Task: Add images on different pages **#26**
      - AC 1: Add image on Reservations page and login/logout as well;

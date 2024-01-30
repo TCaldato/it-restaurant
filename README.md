@@ -289,6 +289,11 @@ While developing the restaurant website, I encountered several errors and bugs t
 
     All the alerts from the Django framework were displaying on the *admin/* path instead of specific pages when a user completed an action. To address this issue, I came across a helpful explanation on [Ordinary Coders](https://ordinarycoders.com/blog/article/django-messages-framework). It taught me how to correctly resolve the problem. [Issue 20](https://github.com/TCaldato/it-restaurant/issues/20)
 
+- Bug 7:
+
+    While I was reviewing and testing the code for final improvements, I encountered an error. When I tried to access the edit_booking as a Superuser, it threw a *Not Found The requested resource was not found on this server.* error. I checked the views_reservations.html and edit_booking.html files, and they appeared to be correct. However, after checking the views.py file, I found that the edit_booking was not allowed to be accessed by a Superuser. To fix this, I added the following code: *if not (request.user == booking.user or request.user.is_superuser):* to check if the user is either the owner of the booking or a Superuser before allowing access to the edit form. [Issue 25](https://github.com/TCaldato/it-restaurant/issues/25)
+
+
 [Back to top](#it-restaurant)
 
 ### Remaining Bugs
